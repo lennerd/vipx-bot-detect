@@ -1,0 +1,8 @@
+imports:
+     - { resource: basic.yml }
+     - { resource: extended_bot.yml }
+     - { resource: extended_crawler.yml }
+     - { resource: extended_spider.yml }
+     - { resource: extended_rss.yml }
+     - { resource: extended_validator.yml }
+     - { resource: extended_spambot.yml }

@@ -1,0 +1,42 @@
+bots:
+    'FAST Enterprise':
+        agent: 'FAST Enterprise Crawler'
+        ip: null
+        type: crawler
+    'FAST WebCrawler':
+        agent: FAST-WebCrawler/
+        ip: null
+        type: crawler
+    'goo ichiro':
+        agent: ichiro
+        ip: null
+        type: crawler
+        meta: { website: 'http://www.goo.ne.jp' }
+    'Heise IT-Markt':
+        agent: heise-IT-Markt-Crawler
+        ip: null
+        type: crawler
+    Heritrix:
+        agent: heritrix/1.
+        ip: null
+        type: crawler
+    Sensis:
+        agent: 'Sensis Web Crawler'
+        ip: null
+        type: crawler
+    Seoma:
+        agent: 'Seoma [SEO Crawler]'
+        ip: null
+        type: crawler
+    SEOSearch:
+        agent: SEOsearch/
+        ip: null
+        type: crawler
+    Steeler:
+        agent: 'http://www.tkl.iis.u-tokyo.ac.jp/~crawler/'
+        ip: null
+        type: crawler
+    W3:
+        agent: 'W3 SiteSearch Crawler'
+        ip: null
+        type: crawler

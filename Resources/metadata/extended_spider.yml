@@ -1,0 +1,82 @@
+bots:
+    123spider:
+        agent: 123spider-Bot
+        ip: null
+        type: spider
+    24spider:
+        agent: 24spider-Robot
+        ip: null
+        type: spider
+    'Best of the Web':
+        agent: 'BOTW Spider'
+        ip: null
+        type: spider
+    Ditto:
+        agent: DittoSpyder
+        ip: null
+        type: spider
+    'Entireweb Speedy':
+        agent: 'Speedy Spider'
+        ip: null
+        type: spider
+    FyberSearch:
+        agent: FyberSpider
+        ip: null
+        type: spider
+    GBSpider:
+        agent: 'GBSpider v'
+        ip: null
+        type: spider
+    Gooro:
+        agent: Gooru-WebSpider
+        ip: null
+        type: spider
+    hbtronix:
+        agent: hbtronix.spider
+        ip: null
+        type: spider
+    'Huawei Symantec':
+        agent: Huaweisymantecspider
+        ip: null
+        type: spider
+    Liquida:
+        agent: 'Liquida Spider'
+        ip: null
+        type: spider
+    Lycos:
+        agent: Lycos_Spider_
+        ip: null
+        type: spider
+    MOMspider:
+        agent: MOMspider
+        ip: null
+        type: spider
+    MoPilot:
+        agent: w@pSpider
+        ip: null
+        type: spider
+    Orange:
+        agent: OrangeSpider
+        ip: null
+        type: spider
+    panscient:
+        agent: panscient.com
+        ip: null
+        type: spider
+    Sogou:
+        agent: Sogou
+        ip: null
+        type: spider
+        meta: { website: 'http://www.sogou.com/docs/help/webmasters.htm' }
+    Soso:
+        agent: Sosospider
+        ip: null
+        type: spider
+    'Soso Image':
+        agent: Sosoimagespider
+        ip: null
+        type: spider
+    Xaldon:
+        agent: 'Xaldon WebSpider'
+        ip: null
+        type: spider

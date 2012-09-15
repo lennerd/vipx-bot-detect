@@ -1,0 +1,152 @@
+bots:
+    Alexa:
+        agent: ia_archiver
+        ip: null
+        type: bot
+    'Alta Vista':
+        agent: Scooter/
+        ip: null
+        type: bot
+    'Ask Jeeves':
+        agent: 'Ask Jeeves'
+        ip: null
+        type: bot
+    Bing:
+        agent: bingbot/
+        ip: null
+        type: bot
+    Exabot:
+        agent: Exabot/
+        ip: null
+        type: bot
+        meta: { website: 'http://exabot.com' }
+    Francis:
+        agent: 'http://www.neomo.de/'
+        ip: null
+        type: bot
+    Gigabot:
+        agent: Gigabot/
+        ip: null
+        type: bot
+    Google:
+        agent: Googlebot
+        ip: null
+        type: bot
+    'Google AdsBot':
+        agent: AdsBot-Google
+        ip: null
+        type: bot
+    'Google Adsense':
+        agent: Mediapartners-Google
+        ip: null
+        type: bot
+    'Google Desktop':
+        agent: 'Google Desktop'
+        ip: null
+        type: bot
+    'Google Feedfetcher':
+        agent: Feedfetcher-Google
+        ip: null
+        type: bot
+    'IBM Research':
+        agent: ibm.com/cs/crawler
+        ip: null
+        type: bot
+    'ICCrawler - ICjobs':
+        agent: 'ICCrawler - ICjobs'
+        ip: null
+        type: bot
+    Majestic-12:
+        agent: MJ12bot/
+        ip: null
+        type: bot
+    Metager:
+        agent: MetagerBot/
+        ip: null
+        type: bot
+    MSN:
+        agent: msnbot/
+        ip: null
+        type: bot
+    'MSN NewsBlogs':
+        agent: msnbot-NewsBlogs/
+        ip: null
+        type: bot
+    'MSNbot Media':
+        agent: msnbot-media/
+        ip: null
+        type: bot
+    NG-Search:
+        agent: NG-Search/
+        ip: null
+        type: bot
+    Nutch:
+        agent: 'http://lucene.apache.org/nutch/'
+        ip: null
+        type: bot
+    Nutch/CVS:
+        agent: NutchCVS/
+        ip: null
+        type: bot
+    OmniExplorer:
+        agent: OmniExplorer_Bot/
+        ip: null
+        type: bot
+    psbot:
+        agent: psbot
+        ip: null
+        type: bot
+        meta: { email: psbot@picsearch.com, website: 'http://www.picsearch.com/menu.cgi?item=About_Psbot' }
+    Seekport:
+        agent: Seekbot/
+        ip: null
+        type: bot
+    'SEO Crawler':
+        agent: 'SEO search Crawler/'
+        ip: null
+        type: bot
+    Snappy:
+        agent: Snappy/
+        ip: null
+        type: bot
+        meta: { website: 'http://www.urltrends.com' }
+    Synoo:
+        agent: SynooBot/
+        ip: null
+        type: bot
+    Telekom:
+        agent: crawleradmin.t-info@telekom.de
+        ip: null
+        type: bot
+    TurnitinBot:
+        agent: TurnitinBot/
+        ip: null
+        type: bot
+    Voyager:
+        agent: voyager/1.0
+        ip: null
+        type: bot
+    WiseNut:
+        agent: 'http://www.WISEnutbot.com'
+        ip: null
+        type: bot
+    YaCy:
+        agent: yacybot
+        ip: null
+        type: bot
+    Yahoo:
+        agent: 'Yahoo! Slurp'
+        ip: null
+        type: bot
+    'Yahoo MMCrawler':
+        agent: Yahoo-MMCrawler/
+        ip: null
+        type: bot
+    'Yahoo Slurp':
+        agent: 'Yahoo! DE Slurp'
+        ip: null
+        type: bot
+    YahooSeeker:
+        agent: YahooSeeker/
+        ip: null
+        type: bot

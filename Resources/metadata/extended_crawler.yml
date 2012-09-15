@@ -1,0 +1,142 @@
+bots:
+    'Amazon Elastic Cloud':
+        agent: grvcrawler/
+        ip: null
+        type: crawler
+    CRAWL-E:
+        agent: CRAWL-E/
+        ip: null
+        type: crawler
+        meta: { website: 'http://code.google.com/p/crawl-e/' }
+    'Crawler Search':
+        agent: .Crawler-Search.de
+        ip: null
+        type: crawler
+    Crawler0.1:
+        agent: Crawler0.1
+        ip: null
+        type: crawler
+    Enaball:
+        agent: EnaBot
+        ip: null
+        type: crawler
+    Exooba:
+        agent: exooba
+        ip: null
+        type: crawler
+    'FAST MetaWeb':
+        agent: 'FAST MetaWeb Crawler'
+        ip: null
+        type: crawler
+    'Fast PartnerSite':
+        agent: 'Fast PartnerSite Crawler'
+        ip: null
+        type: crawler
+    Findexa:
+        agent: 'Findexa Crawler ('
+        ip: null
+        type: crawler
+    g2:
+        agent: g2Crawler
+        ip: null
+        type: crawler
+    'Google Search Appliance':
+        agent: gsa-crawler
+        ip: null
+        type: crawler
+    Houxou:
+        agent: HouxouCrawler/
+        ip: null
+        type: crawler
+    'InfoSeek SideWinder':
+        agent: 'Infoseek SideWinder/'
+        ip: null
+        type: crawler
+    'ISC Open Index':
+        agent: 'ISC Open Index crawler'
+        ip: null
+        type: crawler
+    JustSystems:
+        agent: JUST-CRAWLER
+        ip: null
+        type: crawler
+    Lemur:
+        agent: Lemur
+        ip: null
+        type: crawler
+        meta: { email: admin@lemurproject.org, website: 'http://boston.lti.cs.cmu.edu/crawler_12' }
+    L.webis:
+        agent: L.webis
+        ip: null
+        type: crawler
+    'Metadata Labs':
+        agent: MLBot
+        ip: null
+        type: crawler
+        meta: { email: mlbot@metadatalabs.com, website: 'http://www.metadatalabs.com/mlbot/' }
+    MSIEcrawler:
+        agent: msiecrawler
+        ip: null
+        type: crawler
+    netEstate:
+        agent: '+http://www.sengine.info/'
+        ip: null
+        type: crawler
+        meta: { email: info@netestate.de, website: 'http://www.sengine.info' }
+    Nigma:
+        agent: Nigma
+        ip: null
+        type: crawler
+        meta: { email: crawler@nigma.ru, website: 'http://nigma.ru' }
+    Nimble:
+        agent: NimbleCrawler
+        ip: null
+        type: crawler
+    PostPost:
+        agent: PostPost/
+        ip: null
+        type: crawler
+        meta: { email: crawlers@postpo.st, website: 'http://postpo.st/crawlers' }
+    SISTRIX:
+        agent: 'SISTRIX Crawler'
+        ip: null
+        type: crawler
+        meta: { email: crawler@sistrix.com, website: 'http://crawler.sistrix.net' }
+    Suggy:
+        agent: 'suggybot '
+        ip: null
+        type: crawler
+        meta: { website: 'http://blog.suggy.com/was-ist-suggy/suggy-webcrawler/' }
+    TinEye:
+        agent: TinEye
+        ip: null
+        type: crawler
+        meta: { email: 'http://www.tineye.com/crawler.html' }
+    VSW:
+        agent: VSWCrawler
+        ip: null
+        type: crawler
+        meta: { email: crawler@verticalsearchworks.com, website: 'http://ews.converasearch.com/crawl.htm' }
+    'VSW Convera':
+        agent: ConveraCrawler
+        ip: null
+        type: crawler
+        meta: { email: crawler@verticalsearchworks.com, website: 'http://ews.converasearch.com/crawl.htm' }
+    'VSW ERA':
+        agent: EraCrawler
+        ip: null
+        type: crawler
+        meta: { email: crawler@verticalsearchworks.com, website: 'http://ews.converasearch.com/crawl.htm' }
+    Whitevector:
+        agent: 'Whitevector Crawler'
+        ip: null
+        type: crawler
+    WikiDo:
+        agent: WikiDo
+        ip: null
+        type: crawler
+        meta: { email: crawler@wikido.com, website: 'http://www.wikido.com/wikido.php' }
+    'Yahoo! Search Marketing':
+        agent: crawlx
+        ip: null
+        type: crawler

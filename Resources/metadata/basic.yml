@@ -1,0 +1,5 @@
+imports:
+     - { resource: basic_bot.yml }
+     - { resource: basic_crawler.yml }
+     - { resource: basic_spider.yml }
+     - { resource: basic_validator.yml }

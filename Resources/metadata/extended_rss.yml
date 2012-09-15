@@ -1,0 +1,32 @@
+bots:
+    AideRSS:
+        agent: AideRSS
+        ip: null
+        type: rss
+    NetNewsWire:
+        agent: NetNewsWire/
+        ip: null
+        type: rss
+        meta: { email: support@blackpixel.com, website: 'http://netnewswireapp.com' }
+    NewsFire:
+        agent: NewsFire/
+        ip: null
+        type: rss
+        meta: { email: feedback@newsfirerss.com, website: 'http://www.newsfirerss.com' }
+    NewzCrawler:
+        agent: NewzCrawler/
+        ip: null
+        type: rss
+        meta: { email: info@newzcrawler.com, website: 'http://www.newzcrawler.com' }
+    RSS-Reader:
+        agent: RSS-Reader
+        ip: null
+        type: rss
+    RSS-SPIDER:
+        agent: RSS-SPIDER
+        ip: null
+        type: rss
+    'Yahoo! Feed Seeker':
+        agent: YahooFeedSeeker
+        ip: null
+        type: rss

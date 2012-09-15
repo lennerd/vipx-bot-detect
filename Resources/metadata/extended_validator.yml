@@ -1,0 +1,31 @@
+bots:
+    Checklinks:
+        agent: CheckLinks/
+        ip: null
+        type: validator
+        meta: { email: james@jmarshall.com, website: 'http://www.jmarshall.com/tools/cl/' }
+    JCheckLinks:
+        agent: JCheckLinks
+        ip: null
+        type: validator
+        meta: { email: thoth@purplefrog.com, website: 'http://web.purplefrog.com/~thoth/jchecklinks/' }
+    LongURL:
+        agent: 'LongURL API'
+        ip: null
+        type: validator
+    'W3C CSS Validator':
+        agent: W3C_CSS_Validator
+        ip: null
+        type: validator
+    'W3C Feed Validator':
+        agent: FeedValidator
+        ip: null
+        type: validator
+    'W3C Markup Validator':
+        agent: W3C_Validator
+        ip: null
+        type: validator
+    'W3C P3P Validator':
+        agent: 'P3P Validator'
+        ip: null
+        type: validator

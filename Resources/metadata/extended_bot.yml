@@ -1,0 +1,1898 @@
+bots:
+    1klik.dk:
+        agent: FastCrawler
+        ip: null
+        type: bot
+    '2Bone Link Checker':
+        agent: 2Bone
+        ip: null
+        type: bot
+    50.nu:
+        agent: 50.nu
+        ip: null
+        type: bot
+    80legs:
+        agent: 80legs
+        ip: null
+        type: bot
+    ABACHO:
+        agent: AbachoBOT
+        ip: null
+        type: bot
+    ABCdatos:
+        agent: ABCdatos
+        ip: null
+        type: bot
+    Aberja:
+        agent: 'Aberja Checkomat'
+        ip: null
+        type: bot
+    Abonti:
+        agent: Abonti
+        ip: null
+        type: bot
+    About:
+        agent: About/
+        ip: null
+        type: bot
+    AboutUs:
+        agent: ''
+        ip: null
+        type: bot
+        meta: { website: 'http://www.aboutus.org' }
+    Acoon:
+        agent: AcoonBot/
+        ip: null
+        type: bot
+        meta: { email: webmaster65389@acoon.de, website: 'http://www.acoon.de/robot.asp' }
+    Accelobot:
+        agent: accelobot
+        ip: null
+        type: bot
+    Accoona:
+        agent: accoona
+        ip: null
+        type: bot
+    'Accoona AI':
+        agent: Accoona-AI-Agent/
+        ip: null
+        type: bot
+    ActiveBookmark:
+        agent: ActiveBookmark
+        ip: null
+        type: bot
+    AddThis:
+        agent: AddThis
+        ip: null
+        type: bot
+        meta: { email: tech.support@clearspring.com, website: 'http://www.addthis.com/' }
+    AEIWI:
+        agent: Aeiwi
+        ip: null
+        type: bot
+    Aesop:
+        agent: AESOP
+        ip: null
+        type: bot
+    Agada:
+        agent: agadine
+        ip: null
+        type: bot
+    AgHaven:
+        agent: Aghaven
+        ip: null
+        type: bot
+        meta: { email: Aghaven@aghaven.com, website: 'http://www.aghaven.com' }
+    Ahrefs:
+        agent: AhrefsBot
+        ip: null
+        type: bot
+        meta: { website: 'http://ahrefs.com/robot' }
+    aiHit:
+        agent: aiHitBot/
+        ip: null
+        type: bot
+        meta: { email: matthew.hills@aihit.com, website: 'http://aihit.com' }
+    AISearch:
+        agent: AISearchBot
+        ip: null
+        type: bot
+    Aitellu:
+        agent: Aitellu
+        ip: null
+        type: bot
+        meta: { website: 'http://www.aitellu.com' }
+    Alkaline:
+        agent: AlkalineBOT
+        ip: null
+        type: bot
+        meta: { website: 'http://alkaline.vestris.com' }
+    Allesklar:
+        agent: Allesklar
+        ip: null
+        type: bot
+    Altresium:
+        agent: Altresium/
+        ip: null
+        type: bot
+        meta: { website: 'http://www.altresium.com' }
+    Amfibi:
+        agent: Amfibibot
+        ip: null
+        type: bot
+    Amidalla:
+        agent: amibot
+        ip: null
+        type: bot
+    Aport:
+        agent: Aport
+        ip: null
+        type: bot
+    'Apple Feedreader':
+        agent: Apple-PubSub
+        ip: null
+        type: bot
+    'Apple Syndication':
+        agent: AppleSyndication
+        ip: null
+        type: bot
+    'Arachnid Crawler':
+        agent: ArachBot
+        ip: null
+        type: bot
+    Arexera:
+        agent: X-Crawler
+        ip: null
+        type: bot
+    Arianna:
+        agent: arianna
+        ip: null
+        type: bot
+    ASPseek:
+        agent: ASPseek/
+        ip: null
+        type: bot
+    'Async Http Client':
+        agent: AsyncHttpClient
+        ip: null
+        type: bot
+    Attentio:
+        agent: Attentio
+        ip: null
+        type: bot
+    AustLII:
+        agent: Gromit
+        ip: null
+        type: bot
+    Axada:
+        agent: axadine
+        ip: null
+        type: bot
+    Babaloo:
+        agent: BabalooSpider
+        ip: null
+        type: bot
+    Backtype:
+        agent: 'kame-rt (support@backtype.com)'
+        ip: null
+        type: bot
+        meta: { email: support@backtype.com }
+    Balihoo:
+        agent: Balihoo
+        ip: null
+        type: bot
+    BDProtect:
+        agent: BPImageWalker
+        ip: null
+        type: bot
+    Become:
+        agent: BecomeBot
+        ip: null
+        type: bot
+    Become.com:
+        agent: become.com/
+        ip: null
+        type: bot
+    BeetleBot:
+        agent: BeetleBot
+        ip: null
+        type: bot
+    Begun.ru:
+        agent: 'Begun Robot Crawler'
+        ip: null
+        type: bot
+    Bemash:
+        agent: bemash
+        ip: null
+        type: bot
+        meta: { email: info@bemash.net, website: 'http://www.bemash.net' }
+    'Big Brother':
+        agent: 'Big Brother'
+        ip: null
+        type: bot
+    BigClique:
+        agent: BigCliqueBOT
+        ip: null
+        type: bot
+    'Bim Zone':
+        agent: bim-zone
+        ip: null
+        type: bot
+    Bintellibot:
+        agent: Mozilla/bintellibot
+        ip: null
+        type: bot
+    Biru:
+        agent: Birubot/
+        ip: null
+        type: bot
+    Bit.ly:
+        agent: bitlybot
+        ip: null
+        type: bot
+    BitTorrent:
+        agent: BTbot
+        ip: null
+        type: bot
+    'Bixo Labs':
+        agent: bixolabs
+        ip: null
+        type: bot
+        meta: { email: crawler@bixolabs.com, website: 'http://bixolabs.com' }
+    Blekkobot:
+        agent: Blekkobot
+        ip: null
+        type: bot
+        meta: { website: 'http://blekko.com/about/blekkobot' }
+    BlogDex:
+        agent: BlogBot
+        ip: null
+        type: bot
+    Bloglines:
+        agent: Bloglines
+        ip: null
+        type: bot
+    BlogScope:
+        agent: BlogScope
+        ip: null
+        type: bot
+    BlogSearch:
+        agent: BlogSearch/
+        ip: null
+        type: bot
+        meta: { website: 'http://www.icerocket.com' }
+    Blue.lu:
+        agent: Confuzzledbot
+        ip: null
+        type: bot
+    BoardReader:
+        agent: BoardReader
+        ip: null
+        type: bot
+    Boitho-dc:
+        agent: boitho.com
+        ip: null
+        type: bot
+        meta: { website: 'http://www.boitho.com/dcbot.html' }
+    Bookdog:
+        agent: Bookdog
+        ip: null
+        type: bot
+    Brandwatch:
+        agent: ''
+        ip: null
+        type: bot
+        meta: { email: contact@brandwatch.com, website: 'http://www.brandwatch.com' }
+    'Brandwatch Jakarta':
+        agent: 'Jakarta Commons'
+        ip: 80.82.139
+        type: bot
+    Bunnybot:
+        agent: 'powered by www.buncat.de'
+        ip: null
+        type: bot
+    BuiBui:
+        agent: BuiBui
+        ip: null
+        type: bot
+        meta: { email: buibui@dadapro.com, website: 'http://www.dadapro.com' }
+    Business.com:
+        agent: bdcindexer
+        ip: null
+        type: bot
+    BuzzRanking:
+        agent: BuzzRankingBot
+        ip: null
+        type: bot
+    CanadianContent:
+        agent: RoboCrawl
+        ip: null
+        type: bot
+    Cazoodle:
+        agent: CazoodleBot
+        ip: null
+        type: bot
+    'Ceron News':
+        agent: ceron.jp
+        ip: null
+        type: bot
+        meta: { email: support@ceron.jp, website: 'http://ceron.jp' }
+    'Check Favorites':
+        agent: 'Check Favorites'
+        ip: null
+        type: bot
+    Checkbot:
+        agent: Checkbot
+        ip: null
+        type: bot
+    CheckWeb:
+        agent: CheckWeb
+        ip: null
+        type: bot
+    Cipinet:
+        agent: CipinetBot
+        ip: null
+        type: bot
+    Cityreview:
+        agent: Cityreview
+        ip: null
+        type: bot
+    Claymont:
+        agent: Claymont.com
+        ip: null
+        type: bot
+    cligoo:
+        agent: CligooRobot/
+        ip: null
+        type: bot
+        meta: { website: 'http://www.cligoo.de' }
+    Clush:
+        agent: Clushbot
+        ip: null
+        type: bot
+    'CMS Worldmap':
+        agent: cmsworldmap.com
+        ip: null
+        type: bot
+        meta: { website: 'http://static.153.124.40.188.clients.your-server.de/' }
+    Cometrics:
+        agent: cometrics-bot
+        ip: null
+        type: bot
+    CommandCom:
+        agent: crawly@commandcom.com
+        ip: null
+        type: bot
+    CommonCrawl:
+        agent: ''
+        ip: null
+        type: bot
+        meta: { website: 'http://www.commoncrawl.org/bot.html' }
+    Conpilot:
+        agent: conpilot
+        ip: null
+        type: bot
+    'Consumers Union':
+        agent: cu-spider
+        ip: null
+        type: bot
+    ContextWeb:
+        agent: ContextAd
+        ip: null
+        type: bot
+        meta: { website: 'http://www.contextweb.com' }
+    Cosmix:
+        agent: cfetch/
+        ip: null
+        type: bot
+    Cosmoty:
+        agent: beautybot
+        ip: null
+        type: bot
+    CreativeCommons:
+        agent: CreativeCommons
+        ip: null
+        type: bot
+    Crowsnest:
+        agent: Crowsnest
+        ip: null
+        type: bot
+        meta: { website: 'http://www.crowsnest.tv' }
+    Cruiser:
+        agent: 'Internet Cruiser Robot'
+        ip: null
+        type: bot
+    'Crystal Semantics':
+        agent: CrystalSemanticsBot
+        ip: null
+        type: bot
+        meta: { email: info@crystalsemantics.com, website: 'http://www.crystalsemantics.com/service-navigation/imprint/useragent/' }
+    Cuil:
+        agent: Twiceler
+        ip: null
+        type: bot
+    curl:
+        agent: curl/
+        ip: null
+        type: bot
+    Custo:
+        agent: Custo
+        ip: null
+        type: bot
+    'Cyber Spyder Link Test':
+        agent: CyberSpyder
+        ip: null
+        type: bot
+    CyberPatrol:
+        agent: CyberPatrol
+        ip: null
+        type: bot
+    Cydral:
+        agent: CydralSpider
+        ip: null
+        type: bot
+    Cynthia:
+        agent: Cynthia
+        ip: null
+        type: bot
+    DailyOrbit:
+        agent: Orbiter
+        ip: null
+        type: bot
+    DailyPerfect:
+        agent: DailyPerfect
+        ip: null
+        type: bot
+    Daum:
+        agent: Daumoa
+        ip: null
+        type: bot
+    'Dead Link Check':
+        agent: DeadLinkCheck
+        ip: null
+        type: bot
+    DeepIndex:
+        agent: DeepIndex
+        ip: null
+        type: bot
+    DepSpid:
+        agent: DepSpid
+        ip: null
+        type: bot
+    'Desert Realm':
+        agent: DesertRealm
+        ip: null
+        type: bot
+    'Die Blinde Kuh':
+        agent: 'Die Blinde Kuh'
+        ip: null
+        type: bot
+    Diffbot:
+        agent: Diffbot
+        ip: null
+        type: bot
+    Diggit!:
+        agent: Digger/
+        ip: null
+        type: bot
+    DiscoveryEngine:
+        agent: ''
+        ip: null
+        type: bot
+        meta: { email: discobot@discoveryengine.com, website: 'http://www.discoveryengine.com/discobot.html' }
+    DotNetDotCom.org:
+        agent: DotBot
+        ip: null
+        type: bot
+    'Dow Jones Searchbot':
+        agent: 'Dow Jones Searchbot'
+        ip: null
+        type: bot
+    Dumbfind:
+        agent: Dumbot
+        ip: null
+        type: bot
+    DZNET:
+        agent: Kevin
+        ip: null
+        type: bot
+    EasyBib:
+        agent: 'EasyBib '
+        ip: null
+        type: bot
+        meta: { website: 'http://content.easybib.com/autocite' }
+    EchO!:
+        agent: EchO!/
+        ip: null
+        type: bot
+    EliteSys:
+        agent: 'EliteSys SuperBot/'
+        ip: null
+        type: bot
+    embed.ly:
+        agent: Embedly/
+        ip: null
+        type: bot
+    Envolk:
+        agent: envolk
+        ip: null
+        type: bot
+    Eqentia:
+        agent: EQENTIA
+        ip: null
+        type: bot
+        meta: { email: info@eqentia.com, website: 'http://www.eqentia.com' }
+    eSobi:
+        agent: eSobi
+        ip: null
+        type: bot
+    Esperanza:
+        agent: EsperanzaBot
+        ip: null
+        type: bot
+    EventMachine:
+        agent: 'EventMachine HttpClient'
+        ip: null
+        type: bot
+    Evri:
+        agent: 'Evrinid Iudex'
+        ip: null
+        type: bot
+    Exactseek:
+        agent: ExactSeek
+        ip: null
+        type: bot
+    ExaleadThumbnails:
+        agent: Exabot-Thumbnails
+        ip: null
+        type: bot
+    Ezooms:
+        agent: Ezooms
+        ip: null
+        type: bot
+        meta: { email: ezooms.bot@gmail.com }
+    Facebook:
+        agent: facebookexternalhit
+        ip: null
+        type: bot
+    'Facebook Scraper':
+        agent: facebookscraper
+        ip: null
+        type: bot
+    FairShare:
+        agent: fairshare.cc
+        ip: null
+        type: bot
+    'Fast Crawler Gold':
+        agent: 'Fast Crawler Gold Edition'
+        ip: null
+        type: bot
+    'FAST FirstPage':
+        agent: 'FAST FirstPage retriever'
+        ip: null
+        type: bot
+    Favorstar:
+        agent: favorstarbot
+        ip: null
+        type: bot
+    FeedDemon:
+        agent: FeedDemon
+        ip: null
+        type: bot
+        meta: { website: 'http://www.feeddemon.com' }
+    Feedreader:
+        agent: Newsbrain
+        ip: null
+        type: bot
+        meta: { website: 'http://www.feedreader.com/technology' }
+    Filangy:
+        agent: Filangy
+        ip: null
+        type: bot
+    Fireball:
+        agent: Fireball
+        ip: null
+        type: bot
+    'FLR Treato':
+        agent: FLR-Bot
+        ip: null
+        type: bot
+        meta: { email: botadmin@firstliferesearch.com, website: 'http://www.firstliferesearch.com' }
+    Focuseek:
+        agent: focuseekbot
+        ip: null
+        type: bot
+    Followsite:
+        agent: Followsite
+        ip: null
+        type: bot
+    Freenewsmobile:
+        agent: freenews
+        ip: null
+        type: bot
+        meta: { website: 'http://freerange360.com' }
+    FULLSearch:
+        agent: FULLSearch
+        ip: null
+        type: bot
+    Funnelback:
+        agent: Funnelback
+        ip: null
+        type: bot
+        meta: { website: 'http://www.funnelback.com' }
+    Furl:
+        agent: ''
+        ip: null
+        type: bot
+        meta: { email: wn.furlbot@looksmart.net, website: 'http://www.furl.net' }
+    Gais:
+        agent: Gaisbot/
+        ip: null
+        type: bot
+    Galaxy:
+        agent: GalaxyBot
+        ip: null
+        type: bot
+    Garlik:
+        agent: GarlikCrawler
+        ip: null
+        type: bot
+        meta: { email: crawler@garlik.com, website: 'http://www.garlik.com' }
+    Geigerzaehler:
+        agent: ''
+        ip: null
+        type: bot
+        meta: { website: 'http://www.geigerzaehler.org/bot.html' }
+    genie:
+        agent: 'genieBot ('
+        ip: null
+        type: bot
+    GeoBot:
+        agent: GeoBot/version
+        ip: null
+        type: bot
+    GeoHasher:
+        agent: GeoHasher
+        ip: null
+        type: bot
+        meta: { email: geo_hasher@yahoo.com, website: 'http://geohasher.gotdns.org' }
+    Geona:
+        agent: GeonaBot
+        ip: null
+        type: bot
+    Gigablast:
+        agent: gigablast.com/
+        ip: null
+        type: bot
+    GingerCrawler:
+        agent: GingerCrawler
+        ip: null
+        type: bot
+    Girafa:
+        agent: Girafabot
+        ip: null
+        type: bot
+    Gnip:
+        agent: UnwindFetchor
+        ip: null
+        type: bot
+        meta: { email: info@gnip.com, website: 'http://gnip.com' }
+    GoForIt:
+        agent: GOFORITBOT
+        ip: null
+        type: bot
+    GoGuides:
+        agent: Goblin
+        ip: null
+        type: bot
+    'Google AppEngine':
+        agent: AppEngine-Google
+        ip: null
+        type: bot
+    'Google FeedBurner':
+        agent: FeedBurner
+        ip: null
+        type: bot
+        meta: { website: '(http://www.feedburner.com' }
+    'Google Sitemap':
+        agent: GSMA/
+        ip: null
+        type: bot
+    'Google Web Preview':
+        agent: 'Google Web Preview'
+        ip: null
+        type: bot
+    'Google Wireless Transcoder':
+        agent: 'Google Wireless Transcoder'
+        ip: null
+        type: bot
+    Guruji:
+        agent: GurujiBot
+        ip: null
+        type: bot
+    'Guruji Image':
+        agent: GurujiImageBot
+        ip: null
+        type: bot
+    Hailoo:
+        agent: Hailoobot
+        ip: null
+        type: bot
+        meta: { website: 'http://www.hailoo.com/en/support/webmaster.htm' }
+    Haodewap:
+        agent: haodewap
+        ip: null
+        type: bot
+    'Hatena Antenna':
+        agent: 'Hatena Antenna'
+        ip: null
+        type: bot
+    Heeii:
+        agent: Heeii
+        ip: null
+        type: bot
+    Hogsearch:
+        agent: 'oegp v.'
+        ip: null
+        type: bot
+    Homerweb:
+        agent: Homerbot
+        ip: null
+        type: bot
+    Hoppa!:
+        agent: Toutatis
+        ip: null
+        type: bot
+    'HP Web PrintSmart':
+        agent: 'HP Web PrintSmart'
+        ip: null
+        type: bot
+    'Html Link Validator':
+        agent: 'Html Link Validator'
+        ip: null
+        type: bot
+    HTML2JPG:
+        agent: HTML2JPG
+        ip: null
+        type: bot
+    HTTrack:
+        agent: HTTrack
+        ip: null
+        type: bot
+    IceRocket:
+        agent: BlogzIce
+        ip: null
+        type: bot
+    IconSurf:
+        agent: IconSurf
+        ip: null
+        type: bot
+    'IIT Bombay':
+        agent: IITB
+        ip: null
+        type: bot
+    Ilse:
+        agent: IlseBot
+        ip: null
+        type: bot
+    ImageShack:
+        agent: 'ImageShack Image Fetcher'
+        ip: null
+        type: bot
+    Imageshack/Nutch:
+        agent: ShackCrawl
+        ip: null
+        type: bot
+    InAGist:
+        agent: 'InAGist URL Resolver'
+        ip: null
+        type: bot
+        meta: { website: 'http://inagist.com' }
+    Infegy:
+        agent: Socialradarbot
+        ip: null
+        type: bot
+        meta: { website: 'http://www.infegy.com' }
+    INFOmine:
+        agent: iVia
+        ip: null
+        type: bot
+    'Information Credibility Criteria Project':
+        agent: ICC-Crawler
+        ip: null
+        type: bot
+    Inktomi:
+        agent: Inktomi
+        ip: null
+        type: bot
+    Insuranco:
+        agent: InsurancoBot
+        ip: null
+        type: bot
+    'Internet Archive':
+        agent: archive.org_bot
+        ip: null
+        type: bot
+    'Internet Memory':
+        agent: imbot
+        ip: null
+        type: bot
+        meta: { website: 'http://internetmemory.org/en/' }
+    InternetSeer:
+        agent: InternetSeer
+        ip: null
+        type: bot
+    InternetServicesResearch:
+        agent: MSR-ISRCCrawler
+        ip: null
+        type: bot
+    IPG:
+        agent: internet-provider-guenstig.de-Bot
+        ip: null
+        type: bot
+    IRLbot:
+        agent: 'http://irl.cs.tamu.edu/crawler'
+        ip: null
+        type: bot
+    iScraper:
+        agent: IScraperBot/
+        ip: null
+        type: bot
+    'ISC Systems iRc Search':
+        agent: 'ISC Systems iRc Search'
+        ip: null
+        type: bot
+    Iudex:
+        agent: '+http://gravitext.com/iudex/'
+        ip: null
+        type: bot
+        meta: { website: 'http://gravitext.com/iudex/' }
+    Java1:
+        agent: Java/1
+        ip: null
+        type: bot
+    'JetBrains Omea Reader':
+        agent: Omea
+        ip: null
+        type: bot
+    JikeSpider:
+        agent: JikeSpider
+        ip: null
+        type: bot
+        meta: { website: 'http://shoulu.jike.com/spider.html' }
+    JS-Kit:
+        agent: ''
+        ip: null
+        type: bot
+        meta: { website: 'http://js-kit.com' }
+    Jyxo:
+        agent: ''
+        ip: null
+        type: bot
+        meta: { website: 'http://jyxo.vybereme.cz' }
+    Kalooga:
+        agent: Kalooga
+        ip: null
+        type: bot
+    'Karlsruhe Institute of Technology':
+        agent: 'KIT webcrawler'
+        ip: null
+        type: bot
+    'Keywen Encyclopedia':
+        agent: EasyDL
+        ip: null
+        type: bot
+    'Keywen Encyclopedia Links':
+        agent: KeywenBot
+        ip: null
+        type: bot
+    Kilomonkey:
+        agent: kilomonkey
+        ip: null
+        type: bot
+    KindSight:
+        agent: KSCrawler/Nutch-
+        ip: null
+        type: bot
+    'Korean ISA':
+        agent: checkprivacy.or.kr
+        ip: null
+        type: bot
+        meta: { email: sss@mail.pirst.kr, website: 'http://www.checkprivacy.or.kr:6600/RS/PRIVACY_FAQ.jsp' }
+    Kraehe:
+        agent: '-DIE-KRAEHE- META-SEARCH-ENGINE/'
+        ip: null
+        type: bot
+    'Kungl. biblioteket':
+        agent: kulturarw3
+        ip: null
+        type: bot
+    Kvasir:
+        agent: Solbot
+        ip: null
+        type: bot
+    Larbin:
+        agent: larbin_2.6.3
+        ip: null
+        type: bot
+    Lexxe:
+        agent: LexxeBot/
+        ip: null
+        type: bot
+        meta: { website: 'http://lexxe.com' }
+    'Linguee Multi-Lingual':
+        agent: 'Linguee Bot'
+        ip: null
+        type: bot
+    LinkAlarm:
+        agent: LinkAlarm
+        ip: null
+        type: bot
+    Linkdex:
+        agent: linkdex
+        ip: null
+        type: bot
+        meta: { email: support@linkdex.com, website: 'http://www.linkdex.com' }
+    LinkedIn:
+        agent: LinkedIn/
+        ip: null
+        type: bot
+        meta: { website: 'http://www.linkedin.com' }
+    LinkLint:
+        agent: LinkLint
+        ip: null
+        type: bot
+    LinkNZ:
+        agent: linknzbot
+        ip: null
+        type: bot
+    LinkWalker:
+        agent: LinkWalker
+        ip: null
+        type: bot
+    LiveJournal:
+        agent: LiveJournal
+        ip: null
+        type: bot
+        meta: { email: webmaster@livejournal.com, website: 'http://www.livejournal.com' }
+    Lookseek:
+        agent: Seeker
+        ip: null
+        type: bot
+    Looksmart:
+        agent: MantraAgent
+        ip: null
+        type: bot
+    Luzaki.org:
+        agent: Luzaki
+        ip: null
+        type: bot
+    Lycos:
+        agent: Lycos
+        ip: null
+        type: bot
+    Mail.ru:
+        agent: Mail.RU
+        ip: null
+        type: bot
+        meta: { email: tech@corp.mail.ru, website: 'http://mail.ru' }
+    'Marvin Medhunt':
+        agent: Marvin
+        ip: null
+        type: bot
+    'McAfee Expand':
+        agent: MFE_expand
+        ip: null
+        type: bot
+    McSeek:
+        agent: 'powered by www.McSeek.de'
+        ip: null
+        type: bot
+    Megaglobe:
+        agent: Megaglobe
+        ip: null
+        type: bot
+    Megaproxy:
+        agent: ProxyOS
+        ip: null
+        type: bot
+    MergeFlow:
+        agent: MergeFlow
+        ip: null
+        type: bot
+        meta: { website: 'http://mergeflow.net/info/pagereader' }
+    Metaspinner:
+        agent: Metaspinner
+        ip: null
+        type: bot
+    MetaURI:
+        agent: 'MetaURI API/'
+        ip: null
+        type: bot
+        meta: { email: info@metauri.com, website: 'http://metauri.com' }
+    'Microsoft Academic Search':
+        agent: librabot
+        ip: null
+        type: bot
+    'Microsoft AdCenter':
+        agent: MSNPTC/
+        ip: null
+        type: bot
+    'Microsoft Bing/WinHttp':
+        agent: WinHttp
+        ip: null
+        type: bot
+    'Microsoft Research':
+        agent: MSRBOT
+        ip: null
+        type: bot
+    Mirago:
+        agent: 'HeinrichderMiragoRobot ('
+        ip: null
+        type: bot
+    'Mirago Test':
+        agent: Mirago-Test-Robot
+        ip: null
+        type: bot
+    MirarSearch:
+        agent: 'Mirar Search Indexing Agent'
+        ip: null
+        type: bot
+    MixCat:
+        agent: 'Mixcat Crawler'
+        ip: null
+        type: bot
+    MMSWeb:
+        agent: 'http://www.mmsweb.at/bot.html'
+        ip: null
+        type: bot
+    Mojeek:
+        agent: MojeekBot
+        ip: null
+        type: bot
+    Moreover:
+        agent: Moreoverbot
+        ip: null
+        type: bot
+        meta: { email: webmaster@moreover.com, website: 'http://www.moreover.com' }
+    Morfeo:
+        agent: holmes
+        ip: null
+        type: bot
+    MP3-Bot:
+        agent: MP3-Bot
+        ip: null
+        type: bot
+    'MSN Mobile':
+        agent: MSMOBOT
+        ip: null
+        type: bot
+    Munax:
+        agent: ''
+        ip: 82.99.30
+        type: bot
+    MWI:
+        agent: MWI-UCE-Checker
+        ip: null
+        type: bot
+    MyFamily:
+        agent: MyFamilyBot
+        ip: null
+        type: bot
+    Mylinea:
+        agent: Mylinea
+        ip: null
+        type: bot
+    NationalDirectory:
+        agent: NDSpider
+        ip: null
+        type: bot
+    Naver:
+        agent: Yeti
+        ip: null
+        type: bot
+    Naver2:
+        agent: NaverBot
+        ip: null
+        type: bot
+    Naver3:
+        agent: nhnbot@naver.com
+        ip: null
+        type: bot
+    NerdByNature:
+        agent: NerdByNature.Bot
+        ip: null
+        type: bot
+        meta: { email: info@nerdbynature.net, website: 'http://www.nerdbynature.net' }
+    'Netcraft Survey':
+        agent: NetcraftSurveyAgent/
+        ip: null
+        type: bot
+    'Netcraft WebServerSurvey':
+        agent: 'Netcraft Web Server Survey'
+        ip: null
+        type: bot
+    NetMechanic:
+        agent: NetMechanic
+        ip: null
+        type: bot
+    NetResearchServer:
+        agent: NetResearchServer/
+        ip: null
+        type: bot
+    NetSeer:
+        agent: NetSeer
+        ip: null
+        type: bot
+    NetSprint:
+        agent: NewspointBot
+        ip: null
+        type: bot
+        meta: { email: informacje@netsprint.pl, website: 'http://www.netsprint.eu' }
+    Netvibes:
+        agent: Netvibes
+        ip: null
+        type: bot
+    NextLinks:
+        agent: findlinks
+        ip: null
+        type: bot
+    Nextopia:
+        agent: Nextopia
+        ip: null
+        type: bot
+    Nextthing:
+        agent: nextthing.org
+        ip: null
+        type: bot
+    NING:
+        agent: NING/
+        ip: null
+        type: bot
+    Njuice:
+        agent: NjuiceBot
+        ip: null
+        type: bot
+    Nokodo:
+        agent: NokodoBot
+        ip: null
+        type: bot
+    Noxtrum:
+        agent: ''
+        ip: null
+        type: bot
+        meta: { email: crawler@noxtrum.com, website: 'http://noxtrum.com' }
+    ObjectsSearch:
+        agent: ObjectsSearch
+        ip: null
+        type: bot
+    'oBot Brand Protection':
+        agent: '; oBot)'
+        ip: null
+        type: bot
+        meta: { website: 'http://www.cobion.com' }
+    Ocelli:
+        agent: Ocelli/
+        ip: null
+        type: bot
+    Okidoki:
+        agent: OkidokiBot/
+        ip: null
+        type: bot
+    Omgili:
+        agent: ''
+        ip: null
+        type: bot
+        meta: { website: 'http://omgili.com/Crawler.html' }
+    OneRiot:
+        agent: OneRiot
+        ip: null
+        type: bot
+        meta: { website: 'http://www.oneriot.com' }
+    Onet:
+        agent: OnetSzukaj
+        ip: null
+        type: bot
+    Onet.pl:
+        agent: Onet.pl
+        ip: null
+        type: bot
+    Openfind:
+        agent: openfind.com
+        ip: null
+        type: bot
+    'Openfind 2':
+        agent: Openbot
+        ip: null
+        type: bot
+    OrangeAsk:
+        agent: OrangeAskBot
+        ip: null
+        type: bot
+        meta: { website: 'http://www.orangeask.com' }
+    Orbiter:
+        agent: 'http://www.dailyorbit.com/bot.htm'
+        ip: null
+        type: bot
+    over-zealus:
+        agent: 'Opera/5.0 (Windows NT 4.0;US)'
+        ip: null
+        type: bot
+    OWS:
+        agent: owsBot
+        ip: null
+        type: bot
+    Oxide:
+        agent: Anthill
+        ip: null
+        type: bot
+    Pagebull:
+        agent: Pagebull
+        ip: null
+        type: bot
+    PaperLi:
+        agent: ''
+        ip: null
+        type: bot
+        meta: { website: 'http://support.paper.li/entries/20023257-what-is-paper-li' }
+    Patsearch:
+        agent: Patwebbot
+        ip: null
+        type: bot
+    Paxle:
+        agent: PaxleFramework
+        ip: null
+        type: bot
+    PEERbot:
+        agent: PEERbot
+        ip: null
+        type: bot
+    PHP:
+        agent: PHP/
+        ip: null
+        type: bot
+        meta: { website: 'http://www.php.net' }
+    'PHP version tracker':
+        agent: 'PHP version tracker'
+        ip: null
+        type: bot
+    phpBB-SEO:
+        agent: phpBB-SEO
+        ip: null
+        type: bot
+    Picosearch:
+        agent: PicoSearch
+        ip: null
+        type: bot
+    Pingdom:
+        agent: Pingdom
+        ip: null
+        type: bot
+    Pipeline:
+        agent: pipeLiner
+        ip: null
+        type: bot
+    PlantyNet:
+        agent: PlantyNet_WebRobot_V
+        ip: null
+        type: bot
+    Polybot:
+        agent: polybot
+        ip: null
+        type: bot
+    Popdex:
+        agent: Popdexter
+        ip: null
+        type: bot
+    PostRank:
+        agent: ''
+        ip: null
+        type: bot
+        meta: { website: 'http://www.postrank.com' }
+    Powermarks:
+        agent: Powermarks/
+        ip: null
+        type: bot
+    Powerset:
+        agent: zermelo
+        ip: null
+        type: bot
+    Proximic:
+        agent: proximic
+        ip: null
+        type: bot
+    PycURL:
+        agent: PycURL/
+        ip: null
+        type: bot
+    'Python HTTP':
+        agent: Python-httplib2/
+        ip: null
+        type: bot
+    'Python URL fetcher':
+        agent: Python-urllib/
+        ip: null
+        type: bot
+    Qango:
+        agent: Qango
+        ip: null
+        type: bot
+    'Qirina Hurdler':
+        agent: 'Qirina Hurdler'
+        ip: null
+        type: bot
+        meta: { website: 'http://www.qirina.com/hurdler.html' }
+    Quepasa:
+        agent: QuepasaCreep
+        ip: null
+        type: bot
+    Radian6:
+        agent: ''
+        ip: null
+        type: bot
+        meta: { email: support@radian6.com, website: 'http://www.radian6.com/crawler' }
+    'Radian6 Comments':
+        agent: ''
+        ip: null
+        type: bot
+        meta: { email: support@radian6.com, website: 'http://www.radian6.com/crawler' }
+    'Radian6 FeedFetcher':
+        agent: ''
+        ip: null
+        type: bot
+        meta: { email: support@radian6.com, website: 'http://www.radian6.com/crawler' }
+    'Radian6 Primer':
+        agent: R6_Primer
+        ip: null
+        type: bot
+        meta: { email: support@radian6.com, website: 'http://www.radian6.com/crawler' }
+    Rambler.ru:
+        agent: StackRambler
+        ip: null
+        type: bot
+    'REAP Project':
+        agent: REAP-crawler
+        ip: null
+        type: bot
+    ReciprocalLinksChecker:
+        agent: 'reciprocal links checker'
+        ip: null
+        type: bot
+    Regios:
+        agent: '+http://www.regios.org'
+        ip: null
+        type: bot
+        meta: { website: 'http://www.regios.org' }
+    RIX:
+        agent: RixBot
+        ip: null
+        type: bot
+    'Robot Genius':
+        agent: robotgenius
+        ip: null
+        type: bot
+    'Robots.txt Validator':
+        agent: 'Robots.txt Validator'
+        ip: null
+        type: bot
+    Robozilla:
+        agent: Robozilla/
+        ip: null
+        type: bot
+    RPonline:
+        agent: BlitzBOT
+        ip: null
+        type: bot
+    Ruby:
+        agent: Ruby/
+        ip: null
+        type: bot
+    'SAI Crawler':
+        agent: sai-crawler
+        ip: null
+        type: bot
+    ScoutJet:
+        agent: ScoutJet
+        ip: null
+        type: bot
+    Scribd:
+        agent: ScribdReader/
+        ip: null
+        type: bot
+        meta: { email: support@scribd.com, website: 'http://www.scribd.com' }
+    ScrubTheWeb:
+        agent: Scrubby
+        ip: null
+        type: bot
+    Scumbot:
+        agent: Scumbot/
+        ip: null
+        type: bot
+    'Search 17':
+        agent: Search17Bot
+        ip: null
+        type: bot
+    Searchalot:
+        agent: SEARCHALOT
+        ip: null
+        type: bot
+    Searcharoo:
+        agent: Searcharoo
+        ip: null
+        type: bot
+        meta: { website: 'http://www.searcharoo.net' }
+    SearchByUSA:
+        agent: SearchByUsa
+        ip: null
+        type: bot
+    Search.ch:
+        agent: search.ch
+        ip: null
+        type: bot
+    SearchHippo:
+        agent: 'Fluffy the spider'
+        ip: null
+        type: bot
+    SearchMe:
+        agent: searchme
+        ip: null
+        type: bot
+    'Searchme Charlotte':
+        agent: Charlotte
+        ip: null
+        type: bot
+    SearchScout:
+        agent: ClariaBot
+        ip: null
+        type: bot
+    SearchUK:
+        agent: MegaSheep
+        ip: null
+        type: bot
+    SecureComputing:
+        agent: page_prefetcher
+        ip: null
+        type: bot
+    SEOkicks:
+        agent: SEOkicks
+        ip: null
+        type: bot
+        meta: { email: info@seokicks.de, website: 'http://www.seokicks.de/robot.html' }
+    SEOprofiler:
+        agent: spbot
+        ip: null
+        type: bot
+    Setooz:
+        agent: oozbot
+        ip: null
+        type: bot
+    Seznam:
+        agent: SeznamBot
+        ip: null
+        type: bot
+    'Seznam Screenshot':
+        agent: 'Seznam screenshot-generator'
+        ip: null
+        type: bot
+    Sharegloo:
+        agent: sharegloo
+        ip: null
+        type: bot
+    ShopWiki:
+        agent: ShopWiki/1.0
+        ip: null
+        type: bot
+    Shoula!:
+        agent: Shoula
+        ip: null
+        type: bot
+    SimilarPages:
+        agent: SimilarPages
+        ip: null
+        type: bot
+    SimplePie:
+        agent: SimplePie
+        ip: null
+        type: bot
+    Simply:
+        agent: Argus
+        ip: null
+        type: bot
+    'Singingfish Asterias':
+        agent: Asterias
+        ip: null
+        type: bot
+    SiteBot:
+        agent: sitebot
+        ip: null
+        type: bot
+        meta: { website: 'http://www.sitebot.org' }
+    'Site Valet':
+        agent: Valet
+        ip: null
+        type: bot
+    Sitesearch.ca:
+        agent: Reaper
+        ip: null
+        type: bot
+    SiteSearcher:
+        agent: SSearch
+        ip: null
+        type: bot
+    SiteSell:
+        agent: ''
+        ip: null
+        type: bot
+        meta: { website: 'http://www.sitesell.com/sbider.html' }
+    SiteSpider:
+        agent: SiteSpider
+        ip: null
+        type: bot
+    SitiDi:
+        agent: SitiDiBot
+        ip: null
+        type: bot
+    Skaffe:
+        agent: Skampy
+        ip: null
+        type: bot
+    Skizzle:
+        agent: SKIZZLE
+        ip: null
+        type: bot
+    'Snap Shots':
+        agent: Snapbot
+        ip: null
+        type: bot
+    'Snap Shots Preview':
+        agent: SnapPreviewBot
+        ip: null
+        type: bot
+    Snoopy:
+        agent: Snoopy
+        ip: null
+        type: bot
+    SocialMedia:
+        agent: SocialMediaBot/
+        ip: null
+        type: bot
+    SocialSearcher:
+        agent: SocialSearcher
+        ip: null
+        type: bot
+        meta: { email: sales@social360.com, website: 'http://social360.com' }
+    SoMusical!:
+        agent: MusicWalker
+        ip: null
+        type: bot
+    Spinn3r:
+        agent: ''
+        ip: null
+        type: bot
+        meta: { website: 'http://spinn3r.com/robot' }
+    Startpagina:
+        agent: Startpagina
+        ip: null
+        type: bot
+    Suchen.de:
+        agent: suchen.de
+        ip: null
+        type: bot
+    suchpad:
+        agent: 'http://www.suchpad.de/bot/'
+        ip: null
+        type: bot
+    Summify:
+        agent: ''
+        ip: null
+        type: bot
+        meta: { email: team@summify.com }
+    Superfeedr:
+        agent: Superfeedr
+        ip: null
+        type: bot
+    'DomainTools SurveyBot':
+        agent: SurveyBot
+        ip: null
+        type: bot
+        meta: { website: 'http://www.domaintools.com/webmasters/surveybot.php' }
+    Susie:
+        agent: '!Susie'
+        ip: null
+        type: bot
+    Sygol:
+        agent: SygolBot
+        ip: null
+        type: bot
+    Synthesio:
+        agent: Synthesio
+        ip: null
+        type: bot
+    Szukacz:
+        agent: szukacz
+        ip: null
+        type: bot
+    TalkTalk:
+        agent: 'http://www.talktalk.co.uk/'
+        ip: null
+        type: bot
+        meta: { website: 'http://www.talktalk.co.uk' }
+    Tbot:
+        agent: Tbot/
+        ip: null
+        type: bot
+    'The Best Links':
+        agent: TheBestLinks.com
+        ip: null
+        type: bot
+    Thumbshots:
+        agent: thumbshots-de-Bot
+        ip: null
+        type: bot
+    TipTop:
+        agent: 'http://feeltiptop.com'
+        ip: null
+        type: bot
+        meta: { website: 'http://feeltiptop.com' }
+    Topsy:
+        agent: Butterfly
+        ip: null
+        type: bot
+    Trendiction:
+        agent: trendictionbot
+        ip: null
+        type: bot
+        meta: { email: contact@trendiction.com, website: 'http://www.trendiction.de/bot' }
+    'Tribal Fusion':
+        agent: expo9
+        ip: null
+        type: bot
+        meta: { website: 'http://www.tribalfusion.com' }
+    Trovatore:
+        agent: IlTrovatore
+        ip: null
+        type: bot
+    TweetedTimes:
+        agent: 'TweetedTimes Bot/'
+        ip: null
+        type: bot
+        meta: { email: support@tweetedtimes.com, website: 'http://tweetedtimes.com' }
+    Tweetmeme:
+        agent: ''
+        ip: null
+        type: bot
+        meta: { website: 'http://tweetmeme.com' }
+    Twenga:
+        agent: TwengaBot
+        ip: null
+        type: bot
+    Twikle:
+        agent: Twikle/
+        ip: null
+        type: bot
+        meta: { email: contact@twikle.com, website: 'http://www.twikle.com' }
+    Twingly:
+        agent: 'Twingly Recon'
+        ip: null
+        type: bot
+    'Twisted PageGetter':
+        agent: 'Twisted PageGetter'
+        ip: null
+        type: bot
+    Twitmatic:
+        agent: twitmatic
+        ip: null
+        type: bot
+    Twitter:
+        agent: ''
+        ip: null
+        type: bot
+        meta: { website: 'http://twitter.com' }
+    TwitterFeed:
+        agent: ''
+        ip: null
+        type: bot
+        meta: { email: support@twitterfeed.com, website: 'http://twitterfeed.com' }
+    TwitterJobSearch:
+        agent: TwitterJobSearch.com
+        ip: null
+        type: bot
+        meta: { website: 'http://twitterjobsearch.com' }
+    Twitturly:
+        agent: Twitturly
+        ip: null
+        type: bot
+    Twitturls:
+        agent: Twitturls
+        ip: null
+        type: bot
+        meta: { website: 'http://www.twitturls.com' }
+    Twotrees:
+        agent: 'Willow Internet Crawler'
+        ip: null
+        type: bot
+    Unister:
+        agent: UnisterBot
+        ip: null
+        type: bot
+        meta: { email: info@unister-gmbh.de, website: 'http://www.unister.de' }
+    'Universal Feed Parser':
+        agent: UniversalFeedParser
+        ip: null
+        type: bot
+    urlresolver:
+        agent: urlresolver
+        ip: null
+        type: bot
+    Vagabondo:
+        agent: 'http://webagent.wise-guys.nl/'
+        ip: null
+        type: bot
+    vBSEO:
+        agent: vBSEO
+        ip: null
+        type: bot
+    Visvo:
+        agent: VisBot
+        ip: null
+        type: bot
+    Voila:
+        agent: ''
+        ip: null
+        type: bot
+        meta: { website: 'http://www.voila.fr' }
+    Walhello:
+        agent: appie
+        ip: null
+        type: bot
+    Web2PDF:
+        agent: web2pdfconvert.com
+        ip: null
+        type: bot
+    'Web Site Optimization':
+        agent: ''
+        ip: 67.225.164.12
+        type: bot
+    WebAlta:
+        agent: WebAlta
+        ip: null
+        type: bot
+    webcollage:
+        agent: webcollage
+        ip: null
+        type: bot
+    WebCorp:
+        agent: WebCorp
+        ip: null
+        type: bot
+    WebmasterCoffee:
+        agent: WebmasterCoffee/
+        ip: null
+        type: bot
+        meta: { email: webmaster@webmastercoffee.com, website: 'http://webmastercoffee.com/en' }
+    Webmeasurement:
+        agent: webmeasurement-bot
+        ip: null
+        type: bot
+    'Wikia URL Routine':
+        agent: php_url_routine
+        ip: null
+        type: bot
+    Wikianswers:
+        agent: GrubNG
+        ip: null
+        type: bot
+    Wikiwix:
+        agent: wikiwix-bot-3.0
+        ip: null
+        type: bot
+    WillyFogg:
+        agent: WillyBot
+        ip: null
+        type: bot
+    WiseGuys:
+        agent: Vagabondo
+        ip: null
+        type: bot
+    WissenOnline:
+        agent: WissenOnline-Bot
+        ip: null
+        type: bot
+    Worio:
+        agent: '+http://worio.com'
+        ip: null
+        type: bot
+        meta: { email: ali@worio.com, website: 'http://worio.com' }
+    WWWeasel:
+        agent: 'WWWeasel Robot v'
+        ip: null
+        type: bot
+    'XML Sitemap Generator':
+        agent: 'XML Sitemaps Generator'
+        ip: null
+        type: bot
+    YahooCacheSystem:
+        agent: YahooCacheSystem
+        ip: null
+        type: bot
+    'Yahoo China':
+        agent: 'Slurp China'
+        ip: null
+        type: bot
+        meta: { website: 'http://misc.yahoo.com.cn/help.html' }
+    'Yahoo Japan':
+        agent: yahoo.co.jp
+        ip: null
+        type: bot
+    'Yahoo Pipes':
+        agent: 'Yahoo Pipes'
+        ip: null
+        type: bot
+        meta: { website: 'http://pipes.yahoo.com' }
+    'Yahoo Search Marketing':
+        agent: YahooYSMcm
+        ip: null
+        type: bot
+    'Yahoo! Blogs':
+        agent: Yahoo-Blogs
+        ip: null
+        type: bot
+    'Yahoo! Mindset':
+        agent: 'Yahoo! Mindset'
+        ip: null
+        type: bot
+    'Yahoo! SpiderMan':
+        agent: SpiderMan
+        ip: null
+        type: bot
+    'Yahoo! Test':
+        agent: Yahoo-Test
+        ip: null
+        type: bot
+    'Yahoo! VerticalCrawler':
+        agent: Yahoo-VerticalCrawler
+        ip: null
+        type: bot
+    Yandex:
+        agent: ''
+        ip: null
+        type: bot
+        meta: { email: support@search.yandex.com, website: 'http://help.yandex.com/search/?id=1112030' }
+    'Yandex Images':
+        agent: YandexImages/
+        ip: null
+        type: bot
+        meta: { email: support@search.yandex.com, website: 'http://help.yandex.com/search/?id=1112030' }
+    'Yandex Direct':
+        agent: YandexDirect/
+        ip: null
+        type: bot
+        meta: { email: support@search.yandex.com, website: 'http://help.yandex.com/search/?id=1112030' }
+    Yanga:
+        agent: Yanga
+        ip: null
+        type: bot
+    Yebol:
+        agent: YebolBot
+        ip: null
+        type: bot
+    Yesup:
+        agent: ''
+        ip: null
+        type: bot
+    Yigg:
+        agent: ''
+        ip: [188.138.56.55, 188.138.48.253]
+        type: bot
+    Yodao:
+        agent: YodaoBot
+        ip: null
+        type: bot
+    Youdao:
+        agent: YoudaoBot
+        ip: null
+        type: bot
+    Zerx:
+        agent: zerxbot/
+        ip: null
+        type: bot

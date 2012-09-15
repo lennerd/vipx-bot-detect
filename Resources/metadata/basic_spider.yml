@@ -1,0 +1,6 @@
+bots:
+    Baidu:
+        agent: Baiduspider
+        ip: null
+        type: spider
+        meta: { email: spiderhelp@baidu.com, website: 'http://www.baidu.com/search/spider_english.html' }

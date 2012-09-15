@@ -1,0 +1,9 @@
+bots:
+    'Online link':
+        agent: 'online link validator'
+        ip: null
+        type: validator
+    W3C:
+        agent: 'W3C_*Validator'
+        ip: null
+        type: validator

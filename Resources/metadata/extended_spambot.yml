@@ -1,0 +1,63 @@
+bots:
+    August:
+        agent: AugustBot
+        ip: '2'
+        type: spambot
+        meta: { email: augustbot@163.com }
+    'Boston Project':
+        agent: 'Boston Project'
+        ip: null
+        type: spambot
+    'DLE_Spider Xrumer':
+        agent: DLE_Spider
+        ip: null
+        type: spambot
+    EmailSearch:
+        agent: EmailSearch
+        ip: null
+        type: spambot
+    EXPelite:
+        agent: ExtractorPro
+        ip: null
+        type: spambot
+    FakeWordpress:
+        agent: WordPress/
+        ip: null
+        type: spambot
+    HMSEbot:
+        agent: HMSEbot
+        ip: null
+        type: spambot
+    'Indy Library':
+        agent: 'Indy Library'
+        ip: null
+        type: spambot
+    Java:
+        agent: Java/
+        ip: null
+        type: spambot
+    'libwww script':
+        agent: libwww-perl
+        ip: null
+        type: spambot
+    Lycosa:
+        agent: LYCOSA
+        ip: null
+        type: spambot
+        meta: { website: 'http://lycosa.se' }
+    Shelob:
+        agent: shelob
+        ip: null
+        type: spambot
+    Sonic:
+        agent: EmailSiphon
+        ip: null
+        type: spambot
+    vectra-mods:
+        agent: ''
+        ip: 212.227.101.211
+        type: spambot
+    Wget:
+        agent: Wget
+        ip: null
+        type: spambot
