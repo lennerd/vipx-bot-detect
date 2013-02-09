@@ -121,6 +121,10 @@ class Metadata implements MetadataInterface
         if (is_null($this->ip)) {
             return true;
         }
+        
+        if (is_array($this->ip)) {
+            return in_array($ip, $this->ip);
+        }
 
         return $this->ip === $ip;
     }
