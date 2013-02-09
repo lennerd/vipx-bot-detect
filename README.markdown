@@ -25,7 +25,7 @@ This library helps you detecting bots like Google, Yahoo or Bing.
     # respectively.
     # detector() will return a Vipx\BotDetect\Metadata\Metadata object containing the 
     # details of a matched bot and null on no match.
-    $bot = $detector->$detect($agent, $ip);
+    $bot = $detector->detect($agent, $ip);
 
 ## ToDo's
 
