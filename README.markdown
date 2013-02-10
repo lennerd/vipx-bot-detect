@@ -20,10 +20,10 @@ This library helps you detecting bots like Google, Yahoo or Bing.
     # Instantiate a BotDetector with the YamlFileLoader instance and path to YAML.
     $detector = new BotDetector($loader, $metadataFile);
 
-    # Call detector() on BotDetector, passing in a user agent string and IP address,
+    # Call detect() on BotDetector, passing in a user agent string and IP address,
     # most commonly found in $_SERVER['HTTP_USER_AGENT'] and $_SERVER['REQUEST_ADDR']
     # respectively.
-    # detector() will return a Vipx\BotDetect\Metadata\Metadata object containing the 
+    # detect() will return a Vipx\BotDetect\Metadata\Metadata object containing the 
     # details of a matched bot and null on no match.
     $bot = $detector->detect($agent, $ip);
 
