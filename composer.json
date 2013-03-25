@@ -14,8 +14,8 @@
     "minimum-stability": "dev",
     "require": {
         "php": ">=5.3.2",
-        "symfony/yaml": "2.1.*",
-        "symfony/config": "2.1.*"
+        "symfony/yaml": "2.*",
+        "symfony/config": "2.*"
     },
     "autoload": {
         "psr-0": { "Vipx\\BotDetect": "" }
