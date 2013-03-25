@@ -19,6 +19,7 @@ class BotDetector implements BotDetectorInterface
 
     private $metadatas;
     private $loader;
+    private $resource;
     private $options;
 
     /**
@@ -26,9 +27,10 @@ class BotDetector implements BotDetectorInterface
      * @param $resource
      * @param array $options
      */
-    public function __construct(LoaderInterface $loader, array $options = array())
+    public function __construct(LoaderInterface $loader, $resource, array $options = array())
     {
         $this->loader = $loader;
+        $this->resource = $resource;
 
         $this->setOptions($options);
     }
@@ -40,7 +42,6 @@ class BotDetector implements BotDetectorInterface
     public function setOptions(array $options)
     {
         $this->options = array(
-            'resource'              => __DIR__ . '/Resources/metadata/basic_bot.yml',
             'cache_dir'             => null,
             'debug'                 => false,
             'metadata_cache_file'   => 'project_vipx_bot_detect_metadata.php',
@@ -71,11 +72,9 @@ class BotDetector implements BotDetectorInterface
             return $this->metadatas;
         }
 
-        $resource = $this->options['resource'];
-
         if (null === $this->options['cache_dir'] || null === $this->options['metadata_cache_file']) {
             /** @var $metadataCollection \Vipx\BotDetect\Metadata\MetadataCollection */
-            $metadataCollection = $this->loader->load($resource);
+            $metadataCollection = $this->loader->load($this->resource);
 
             return $this->metadatas = $metadataCollection->getMetadatas();
         }
@@ -84,7 +83,7 @@ class BotDetector implements BotDetectorInterface
 
         if (!$cache->isFresh()) {
             /** @var $metadataCollection \Vipx\BotDetect\Metadata\MetadataCollection */
-            $metadataCollection = $this->loader->load($resource);
+            $metadataCollection = $this->loader->load($this->resource);
             $dumperClass = $this->options['metadata_dumper_class'];
 
             /** @var $dumper \Vipx\BotDetect\Metadata\Dumper\MetadataDumper */
