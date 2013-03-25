@@ -42,9 +42,10 @@ class BotDetectorTest extends \PHPUnit_Framework_TestCase
     {
         $locator = new FileLocator();
         $loader = new YamlFileLoader($locator);
-        $metadataFile = __DIR__ . '/../Resources/metadata/extended.yml';
 
-        return new BotDetector($loader, $metadataFile);
+        return new BotDetector($loader, array(
+            'resource' => __DIR__ . '/../Resources/metadata/extended.yml',
+        ));
     }
 
 }
