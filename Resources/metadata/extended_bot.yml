@@ -37,6 +37,7 @@ bots:
         type: bot
     AboutUs:
         agent: ''
+        agent_match: exact
         ip: null
         type: bot
         meta: { website: 'http://www.aboutus.org' }
@@ -280,6 +281,7 @@ bots:
         type: bot
     Brandwatch:
         agent: ''
+        agent_match: exact
         ip: null
         type: bot
         meta: { email: contact@brandwatch.com, website: 'http://www.brandwatch.com' }
@@ -365,6 +367,7 @@ bots:
         type: bot
     CommonCrawl:
         agent: ''
+        agent_match: exact
         ip: null
         type: bot
         meta: { website: 'http://www.commoncrawl.org/bot.html' }
@@ -477,6 +480,7 @@ bots:
         type: bot
     DiscoveryEngine:
         agent: ''
+        agent_match: exact
         ip: null
         type: bot
         meta: { email: discobot@discoveryengine.com, website: 'http://www.discoveryengine.com/discobot.html' }
@@ -622,6 +626,7 @@ bots:
         meta: { website: 'http://www.funnelback.com' }
     Furl:
         agent: ''
+        agent_match: exact
         ip: null
         type: bot
         meta: { email: wn.furlbot@looksmart.net, website: 'http://www.furl.net' }
@@ -640,6 +645,7 @@ bots:
         meta: { email: crawler@garlik.com, website: 'http://www.garlik.com' }
     Geigerzaehler:
         agent: ''
+        agent_match: exact
         ip: null
         type: bot
         meta: { website: 'http://www.geigerzaehler.org/bot.html' }
@@ -862,11 +868,13 @@ bots:
         meta: { website: 'http://shoulu.jike.com/spider.html' }
     JS-Kit:
         agent: ''
+        agent_match: exact
         ip: null
         type: bot
         meta: { website: 'http://js-kit.com' }
     Jyxo:
         agent: ''
+        agent_match: exact
         ip: null
         type: bot
         meta: { website: 'http://jyxo.vybereme.cz' }
@@ -1159,6 +1167,7 @@ bots:
         type: bot
     Noxtrum:
         agent: ''
+        agent_match: exact
         ip: null
         type: bot
         meta: { email: crawler@noxtrum.com, website: 'http://noxtrum.com' }
@@ -1181,6 +1190,7 @@ bots:
         type: bot
     Omgili:
         agent: ''
+        agent_match: exact
         ip: null
         type: bot
         meta: { website: 'http://omgili.com/Crawler.html' }
@@ -1232,6 +1242,7 @@ bots:
         type: bot
     PaperLi:
         agent: ''
+        agent_match: exact
         ip: null
         type: bot
         meta: { website: 'http://support.paper.li/entries/20023257-what-is-paper-li' }
@@ -1286,6 +1297,7 @@ bots:
         type: bot
     PostRank:
         agent: ''
+        agent_match: exact
         ip: null
         type: bot
         meta: { website: 'http://www.postrank.com' }
@@ -1328,16 +1340,19 @@ bots:
         type: bot
     Radian6:
         agent: ''
+        agent_match: exact
         ip: null
         type: bot
         meta: { email: support@radian6.com, website: 'http://www.radian6.com/crawler' }
     'Radian6 Comments':
         agent: ''
+        agent_match: exact
         ip: null
         type: bot
         meta: { email: support@radian6.com, website: 'http://www.radian6.com/crawler' }
     'Radian6 FeedFetcher':
         agent: ''
+        agent_match: exact
         ip: null
         type: bot
         meta: { email: support@radian6.com, website: 'http://www.radian6.com/crawler' }
@@ -1521,6 +1536,7 @@ bots:
         type: bot
     SiteSell:
         agent: ''
+        agent_match: exact
         ip: null
         type: bot
         meta: { website: 'http://www.sitesell.com/sbider.html' }
@@ -1567,6 +1583,7 @@ bots:
         type: bot
     Spinn3r:
         agent: ''
+        agent_match: exact
         ip: null
         type: bot
         meta: { website: 'http://spinn3r.com/robot' }
@@ -1584,6 +1601,7 @@ bots:
         type: bot
     Summify:
         agent: ''
+        agent_match: exact
         ip: null
         type: bot
         meta: { email: team@summify.com }
@@ -1659,6 +1677,7 @@ bots:
         meta: { email: support@tweetedtimes.com, website: 'http://tweetedtimes.com' }
     Tweetmeme:
         agent: ''
+        agent_match: exact
         ip: null
         type: bot
         meta: { website: 'http://tweetmeme.com' }
@@ -1685,11 +1704,13 @@ bots:
         type: bot
     Twitter:
         agent: ''
+        agent_match: exact
         ip: null
         type: bot
         meta: { website: 'http://twitter.com' }
     TwitterFeed:
         agent: ''
+        agent_match: exact
         ip: null
         type: bot
         meta: { email: support@twitterfeed.com, website: 'http://twitterfeed.com' }
@@ -1738,6 +1759,7 @@ bots:
         type: bot
     Voila:
         agent: ''
+        agent_match: exact
         ip: null
         type: bot
         meta: { website: 'http://www.voila.fr' }
@@ -1855,6 +1877,7 @@ bots:
         type: bot
     Yandex:
         agent: ''
+        agent_match: exact
         ip: null
         type: bot
         meta: { email: support@search.yandex.com, website: 'http://help.yandex.com/search/?id=1112030' }
@@ -1878,6 +1901,7 @@ bots:
         type: bot
     Yesup:
         agent: ''
+        agent_match: exact
         ip: null
         type: bot
     Yigg:
