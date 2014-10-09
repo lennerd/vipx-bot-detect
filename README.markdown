@@ -4,28 +4,35 @@ This library helps you detecting bots like Google, Yahoo or Bing.
 
 [![Build Status](https://secure.travis-ci.org/lennerd/vipx-bot-detect.png)](http://travis-ci.org/lennerd/vipx-bot-detect)
 
+## Installation using [composer](https://getcomposer.org/)
+
+``` bash
+$ php composer.phar require vipx/bot-detect
+```
 ## Usage
 
-    use Vipx\BotDetect\BotDetector;
-    use Symfony\Component\Config\FileLocator;
-    use Vipx\BotDetect\Metadata\Loader\YamlFileLoader;
+``` php
+use Vipx\BotDetect\BotDetector;
+use Symfony\Component\Config\FileLocator;
+use Vipx\BotDetect\Metadata\Loader\YamlFileLoader;
 
-    # Instantiate Symfony components required to load and parse YAML files.
-    $locator = new FileLocator();
-    $loader = new YamlFileLoader($locator);
+# Instantiate Symfony components required to load and parse YAML files.
+$locator = new FileLocator();
+$loader = new YamlFileLoader($locator);
 
-    # Use extended bot list prodivded in Resources directory.
-    $metadataFile = './Resources/metadata/extended.yml';
+# Use extended bot list prodivded in Resources directory.
+$metadataFile = './Resources/metadata/extended.yml';
 
-    # Instantiate a BotDetector with the YamlFileLoader instance and path to YAML.
-    $detector = new BotDetector($loader, $metadataFile);
+# Instantiate a BotDetector with the YamlFileLoader instance and path to YAML.
+$detector = new BotDetector($loader, $metadataFile);
 
-    # Call detect() on BotDetector, passing in a user agent string and IP address,
-    # most commonly found in $_SERVER['HTTP_USER_AGENT'] and $_SERVER['REQUEST_ADDR']
-    # respectively.
-    # detect() will return a Vipx\BotDetect\Metadata\Metadata object containing the 
-    # details of a matched bot and null on no match.
-    $bot = $detector->detect($agent, $ip);
+# Call detect() on BotDetector, passing in a user agent string and IP address,
+# most commonly found in $_SERVER['HTTP_USER_AGENT'] and $_SERVER['REQUEST_ADDR']
+# respectively.
+# detect() will return a Vipx\BotDetect\Metadata\Metadata object containing the 
+# details of a matched bot and null on no match.
+$bot = $detector->detect($agent, $ip);
+```
 
 ## ToDo's
 
