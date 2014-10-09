@@ -245,6 +245,10 @@ bots:
         ip: null
         type: bot
         meta: { website: 'http://blekko.com/about/blekkobot' }
+    BLEXBot:
+        agent: BLEXBot
+        ip: null
+        type: bot
     BlogDex:
         agent: BlogBot
         ip: null
