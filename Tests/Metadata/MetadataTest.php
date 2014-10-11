@@ -16,18 +16,21 @@ use Vipx\BotDetect\Metadata\Metadata;
 class MetadataTest extends \PHPUnit_Framework_TestCase
 {
 
-    public function testMatchExact()
-    {
-        $metadata = $this->createMetadata('test', null);
-
-        $this->assertTrue($metadata->match('test', '127.0.0.1'));
-    }
-
     public function testMatchRegexp()
     {
-        $metadata = $this->createMetadata('test', null, Metadata::AGENT_MATCH_REGEXP);
+        $metadata = $this->createMetadata('test');
+        $metadata->setAgentMatch(Metadata::AGENT_MATCH_REGEXP);
 
         $this->assertTrue($metadata->match('test-agent', '127.0.0.1'));
+        $this->assertFalse($metadata->match('foo', '127.0.0.1'));
+    }
+
+    public function testMatchExact()
+    {
+        $metadata = $this->createMetadata('test');
+
+        $this->assertTrue($metadata->match('test', '127.0.0.1'));
+        $this->assertFalse($metadata->match('test-agent', '127.0.0.1'));
     }
 
     public function testMatchIp()
@@ -35,18 +38,43 @@ class MetadataTest extends \PHPUnit_Framework_TestCase
         $metadata = $this->createMetadata('test', '127.0.0.1');
 
         $this->assertTrue($metadata->match('test', '127.0.0.1'));
+        $this->assertFalse($metadata->match('test', '127.0.0.2'));
     }
 
     public function testMatchIpArray()
     {
-        $metadata = $this->createMetadata('test', array('127.0.0.0', '127.0.0.1'));
+        $metadata = $this->createMetadata('test', array('127.0.0.1', '127.0.0.2'));
 
         $this->assertTrue($metadata->match('test', '127.0.0.1'));
+        $this->assertFalse($metadata->match('test', '127.0.0.3'));
     }
 
-    private function createMetadata($agent, $ip, $agentMatch = Metadata::AGENT_MATCH_EXACT)
+    public function testMeta()
     {
-        return new Metadata('TestBot', $agent, $ip, Metadata::TYPE_BOT, array(), $agentMatch);
+        $meta = array('foo' => 'bar');
+
+        $metadata = $this->createMetadata('test');
+        $metadata->setMeta($meta);
+
+        $this->assertEquals($meta, $metadata->getMeta());
+    }
+
+    public function testAgentMatch()
+    {
+        $match = Metadata::AGENT_MATCH_REGEXP;
+
+        $metadata = $this->createMetadata('test');
+        $metadata->setAgentMatch($match);
+
+        $this->assertEquals($match, $metadata->getAgentMatch());
+    }
+
+    private function createMetadata($agent, $ip = null)
+    {
+        $metadata = new Metadata('TestBot', $agent, $ip, Metadata::TYPE_BOT);
+        $metadata->setAgentMatch(Metadata::AGENT_MATCH_EXACT);
+
+        return $metadata;
     }
 
 }

@@ -26,7 +26,7 @@ class PhpMetadataDumper extends MetadataDumper
 
 /**
  * This file has been auto-generated
- * by the VipxBotDetectBundle.
+ * by the VipxBotDetect package.
  */
 
 \$metdatas = array();
