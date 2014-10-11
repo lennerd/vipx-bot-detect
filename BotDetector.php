@@ -64,6 +64,16 @@ class BotDetector implements BotDetectorInterface
     }
 
     /**
+     * Returns the detector options
+     *
+     * @return array
+     */
+    public function getOptions()
+    {
+        return $this->options;
+    }
+
+    /**
      * @return \Vipx\BotDetect\Metadata\Metadata[]
      */
     public function getMetadatas()

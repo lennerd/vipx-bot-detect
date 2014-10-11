@@ -19,9 +19,9 @@ class BotDetectorTest extends \PHPUnit_Framework_TestCase
 {
 
     /**
-     * @expectedException InvalidArgumentException
+     * @expectedException \InvalidArgumentException
      */
-    public function testSettingOptions()
+    public function testInvalidOptions()
     {
         $detector = $this->getDetector();
 
@@ -30,12 +30,27 @@ class BotDetectorTest extends \PHPUnit_Framework_TestCase
         ));
     }
 
+    public function testValidOptions()
+    {
+        $options = array(
+            'debug' => true
+        );
+
+        $detector = $this->getDetector();
+        $detector->setOptions($options);
+        $options = $detector->getOptions();
+
+        $this->assertArrayHasKey('debug', $options);
+        $this->assertTrue($options['debug']);
+    }
+
     public function testDetection()
     {
         $detector = $this->getDetector();
 
         $this->assertEquals($detector->detect('Googlebot', '')->getName(), 'Google');
         $this->assertEquals($detector->detect('', '212.227.101.211')->getName(), 'AboutUs');
+        $this->assertNull($detector->detect('VipxBot', ''));
     }
 
     private function getDetector()
