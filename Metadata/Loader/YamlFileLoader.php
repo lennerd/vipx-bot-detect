@@ -53,8 +53,12 @@ class YamlFileLoader extends FileLoader
     /**
      * Parses all imports
      *
-     * @param array  $content
+     * @param MetadataCollection $collection
+     * @param array $content
      * @param string $file
+     * @throws \Exception
+     * @throws \Symfony\Component\Config\Exception\FileLoaderImportCircularReferenceException
+     * @throws \Symfony\Component\Config\Exception\FileLoaderLoadException
      */
     private function parseImports(MetadataCollection $collection, $content, $file)
     {
@@ -71,6 +75,7 @@ class YamlFileLoader extends FileLoader
     /**
      * Parses all bot metadatas
      *
+     * @param MetadataCollection $collection
      * @param $content
      * @return array
      */

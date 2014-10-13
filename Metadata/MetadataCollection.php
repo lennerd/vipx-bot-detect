@@ -12,9 +12,8 @@
 namespace Vipx\BotDetect\Metadata;
 
 use Symfony\Component\Config\Resource\ResourceInterface;
-use Vipx\BotDetect\Metadata\MetadataInterface;
 
-class MetadataCollection
+class MetadataCollection implements \IteratorAggregate
 {
 
     private $resources = array();
@@ -51,4 +50,11 @@ class MetadataCollection
         return $this->resources;
     }
 
+    /**
+     * @return \Traversable
+     */
+    public function getIterator()
+    {
+        return new \ArrayIterator($this->metadatas);
+    }
 }
