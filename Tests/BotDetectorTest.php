@@ -14,16 +14,20 @@ namespace Vipx\BotDetect\Tests;
 use Vipx\BotDetect\BotDetector;
 use Symfony\Component\Config\FileLocator;
 use Vipx\BotDetect\Metadata\Loader\YamlFileLoader;
+use Vipx\BotDetect\Metadata\MetadataInterface;
 
 class BotDetectorTest extends \PHPUnit_Framework_TestCase
 {
+
+    private $metadatas;
+    private $loader;
 
     /**
      * @expectedException \InvalidArgumentException
      */
     public function testInvalidOptions()
     {
-        $detector = $this->getDetector();
+        $detector = $this->createDetector();
 
         $detector->setOptions(array(
             'invalid_options' => 'value'
@@ -36,7 +40,7 @@ class BotDetectorTest extends \PHPUnit_Framework_TestCase
             'debug' => true
         );
 
-        $detector = $this->getDetector();
+        $detector = $this->createDetector();
         $detector->setOptions($options);
         $options = $detector->getOptions();
 
@@ -44,22 +48,68 @@ class BotDetectorTest extends \PHPUnit_Framework_TestCase
         $this->assertTrue($options['debug']);
     }
 
-    public function testDetection()
+    public function testCacheOptions()
     {
-        $detector = $this->getDetector();
+        $cacheFile = tempnam(sys_get_temp_dir(), 'vipx_bot_detect_test_metadata_');
 
-        $this->assertEquals($detector->detect('Googlebot', '')->getName(), 'Google');
-        $this->assertEquals($detector->detect('', '212.227.101.211')->getName(), 'AboutUs');
-        $this->assertNull($detector->detect('VipxBot', ''));
+        $options = array(
+            'cache_dir' => dirname($cacheFile),
+            'metadata_cache_file' => basename($cacheFile),
+        );
+
+        $detector = $this->createDetector();
+        $detector->setOptions($options);
+
+        $this->assertEquals(require $cacheFile, $detector->getMetadatas());
+
+        unlink($cacheFile);
     }
 
-    private function getDetector()
+    public function testDetection()
     {
-        $locator = new FileLocator();
-        $loader = new YamlFileLoader($locator);
-        $metadataFile = __DIR__ . '/../Resources/metadata/extended.yml';
+        $detector = $this->createDetector();
 
-        return new BotDetector($loader, $metadataFile);
+        $this->assertInstanceOf('Vipx\BotDetect\Metadata\MetadataInterface', $detector->detect('Googlebot', '127.0.0.1'));
+        $this->assertNull($detector->detect('VipxBot', '127.0.0.1'));
+    }
+
+    private function createDetector()
+    {
+        return new BotDetector($this->getLoader(), '/my/vipx/bot/file.yml');
+    }
+
+    private function getLoader()
+    {
+        if (null === $this->loader) {
+            $loader = $this->getMock('Symfony\Component\Config\Loader\LoaderInterface');
+
+            $loader->expects($this->any())
+                ->method('load')
+                ->will($this->returnValue($this->getMetadatas()));
+
+            $this->loader = $loader;
+        }
+
+        return $this->loader;
+    }
+
+    private function getMetadatas()
+    {
+        if (null === $this->metadatas) {
+            $googleBot = $this->getMock('Vipx\BotDetect\Metadata\MetadataInterface');
+
+            $googleBot->expects($this->any())
+                ->method('match')
+                ->will($this->returnCallback(function($agent, $ip) {
+                    return $agent == 'Googlebot' && $ip === '127.0.0.1';
+                }));
+
+            $this->metadatas = array(
+                $googleBot,
+            );
+        }
+
+        return $this->metadatas;
     }
 
 }
