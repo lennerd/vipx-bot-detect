@@ -316,6 +316,7 @@ bots:
         ip: null
         type: bot
     ButterflyBot:
+        agent: ''
         ip: 74.112.128.0/22
         type: bot
     CanadianContent:
@@ -614,10 +615,6 @@ bots:
         ip: null
         type: bot
         meta: { email: botadmin@firstliferesearch.com, website: 'http://www.firstliferesearch.com' }
-    'FLIPBOARD PROXY SERVICE':
-        agent: FlipboardProxy
-        type: bot
-        meta: { website: 'http://flipboard.com/browserproxy' }
     Focuseek:
         agent: focuseekbot
         ip: null
@@ -708,6 +705,9 @@ bots:
         ip: null
         type: bot
     'Google Bot':
+        agent: ''
+        ip: null
+        type: bot
         meta: { email: 'googlebot(at)googlebot.com' }
     'Google AppEngine':
         agent: AppEngine-Google
@@ -1049,7 +1049,9 @@ bots:
         ip: null
         type: bot
     'Microsoft Bot':
+        agent: ''        
         ip: 23.96.208.137
+        type: bot
     'Microsoft Research':
         agent: MSRBOT
         ip: null
