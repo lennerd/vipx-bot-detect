@@ -129,6 +129,11 @@ bots:
         agent: Aport
         ip: null
         type: bot
+    'Apple Bot':
+        agent: Applebot
+        ip: null
+        type: bot
+        metadata: { website: 'http://www.apple.com/go/applebot' }
     'Apple Feedreader':
         agent: Apple-PubSub
         ip: null
@@ -309,6 +314,9 @@ bots:
     BuzzRanking:
         agent: BuzzRankingBot
         ip: null
+        type: bot
+    ButterflyBot:
+        ip: 74.112.128.0/22
         type: bot
     CanadianContent:
         agent: RoboCrawl
@@ -606,6 +614,10 @@ bots:
         ip: null
         type: bot
         meta: { email: botadmin@firstliferesearch.com, website: 'http://www.firstliferesearch.com' }
+    'FLIPBOARD PROXY SERVICE':
+        agent: FlipboardProxy
+        type: bot
+        meta: { website: 'http://flipboard.com/browserproxy' }
     Focuseek:
         agent: focuseekbot
         ip: null
@@ -1034,6 +1046,8 @@ bots:
         agent: WinHttp
         ip: null
         type: bot
+    'Microsoft Bot':
+        ip: 23.96.208.137
     'Microsoft Research':
         agent: MSRBOT
         ip: null
@@ -1245,8 +1259,7 @@ bots:
         ip: null
         type: bot
     PaperLi:
-        agent: ''
-        agent_match: exact
+        agent: PaperLiBot
         ip: null
         type: bot
         meta: { website: 'http://support.paper.li/entries/20023257-what-is-paper-li' }
@@ -1680,11 +1693,10 @@ bots:
         type: bot
         meta: { email: support@tweetedtimes.com, website: 'http://tweetedtimes.com' }
     Tweetmeme:
-        agent: ''
-        agent_match: exact
+        agent: TweetmemeBot
         ip: null
         type: bot
-        meta: { website: 'http://tweetmeme.com' }
+        meta: { website: 'http://datasift.com/bot.html' }
     Twenga:
         agent: TwengaBot
         ip: null
@@ -1707,11 +1719,9 @@ bots:
         ip: null
         type: bot
     Twitter:
-        agent: ''
-        agent_match: exact
+        agent: Twitterbot
         ip: null
         type: bot
-        meta: { website: 'http://twitter.com' }
     TwitterFeed:
         agent: ''
         agent_match: exact
@@ -1880,11 +1890,10 @@ bots:
         ip: null
         type: bot
     Yandex:
-        agent: ''
-        agent_match: exact
+        agent: YandexBot
         ip: null
         type: bot
-        meta: { email: support@search.yandex.com, website: 'http://help.yandex.com/search/?id=1112030' }
+        meta: { website: 'http://yandex.com/bots' }
     'Yandex Images':
         agent: YandexImages/
         ip: null
