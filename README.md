@@ -38,6 +38,7 @@ $bot = $detector->detect($agent, $ip);
 ## ToDo's
 
 - Add additional meta data loaders (xml, php)
+- Replace static fixtures with dynamically added data for example from an external archive with some kind of public API or other repository e.g. on Github or Bitbucket
 
 ## Credits
 
