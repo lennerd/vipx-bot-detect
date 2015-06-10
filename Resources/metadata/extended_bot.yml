@@ -704,11 +704,6 @@ bots:
         agent: Goblin
         ip: null
         type: bot
-    'Google Bot':
-        agent: ''
-        ip: null
-        type: bot
-        meta: { email: 'googlebot(at)googlebot.com' }
     'Google AppEngine':
         agent: AppEngine-Google
         ip: null
