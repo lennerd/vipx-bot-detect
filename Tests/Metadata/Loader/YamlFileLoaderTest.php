@@ -35,11 +35,11 @@ class YamlFileLoaderTest extends \PHPUnit_Framework_TestCase
 
         $metadatas = $loader->load($metadataFile)->getMetadatas();
 
-        $this->assertArrayHasKey('Google', $metadatas);
+        $this->assertArrayHasKey('Googlebot', $metadatas);
         $this->assertArrayHasKey('vectra-mods', $metadatas);
 
         /** @var $metadata \Vipx\BotDetect\Metadata\Metadata */
-        $metadata = $metadatas['Google'];
+        $metadata = $metadatas['Googlebot'];
 
         $this->assertEquals('Googlebot', $metadata->getAgent());
         $this->assertEquals(null, $metadata->getIp());

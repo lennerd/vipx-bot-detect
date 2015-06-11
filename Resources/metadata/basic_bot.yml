@@ -28,7 +28,7 @@ bots:
         agent: Gigabot/
         ip: null
         type: bot
-    'Google Bot':
+    Googlebot:
         agent: Googlebot
         ip: null
         type: bot
