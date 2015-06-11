@@ -28,10 +28,11 @@ bots:
         agent: Gigabot/
         ip: null
         type: bot
-    Google:
+    Googlebot:
         agent: Googlebot
         ip: null
         type: bot
+        meta: { email: 'googlebot(at)googlebot.com' }
     'Google AdsBot':
         agent: AdsBot-Google
         ip: null
