@@ -20,6 +20,10 @@ bots:
         agent: EnaBot
         ip: null
         type: crawler
+    ExaleadCloudview:
+        agent: ExaleadCloudview
+        ip: null
+        type: crawler
     Exooba:
         agent: exooba
         ip: null
