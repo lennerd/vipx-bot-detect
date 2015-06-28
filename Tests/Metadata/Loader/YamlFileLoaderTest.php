@@ -27,6 +27,17 @@ class YamlFileLoaderTest extends \PHPUnit_Framework_TestCase
         $this->assertFalse($loader->supports('test.xml'));
     }
 
+    public function testEasyLoaderPath()
+    {
+        $locator = new FileLocator();
+        $loader = new YamlFileLoader($locator);
+
+        $metadatasAbsolute  = $loader->load( __DIR__ . '/../../../Resources/metadata/extended.yml' )->getMetadatas();
+        $metadatasEasy = $loader->load( 'extended.yml' )->getMetadatas();
+
+        $this->assertEquals($metadatasAbsolute, $metadatasEasy);
+    }
+
     public function testParsing()
     {
         $locator = new FileLocator();
