@@ -18,7 +18,8 @@
         "symfony/config": "~2.1"
     },
     "require-dev": {
-        "satooshi/php-coveralls": "dev-master"
+        "satooshi/php-coveralls": "dev-master",
+        "phpunit/phpunit": "4.7.*"
     },
     "autoload": {
         "psr-0": { "Vipx\\BotDetect": "" }
