@@ -32,7 +32,7 @@ class YamlFileLoader extends FileLoader
 
         $collection->addResource(new FileResource($file));
 
-        $content = Yaml::parse($file);
+        $content = Yaml::parse( file_get_contents($file) );
 
         $this->parseImports($collection, $content, $file);
         $this->parseBots($collection, $content);
