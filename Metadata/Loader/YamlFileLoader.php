@@ -27,7 +27,7 @@ class YamlFileLoader extends FileLoader
      */
     public function load($file, $type = null)
     {
-        $file = $this->locator->locate($file);
+        $file = $this->locator->locate($file, __DIR__.'/../../Resources/metadata');
         $collection = new MetadataCollection();
 
         $collection->addResource(new FileResource($file));
