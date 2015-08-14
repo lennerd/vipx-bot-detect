@@ -31,9 +31,9 @@ class YamlFileLoaderTest extends \PHPUnit_Framework_TestCase
     {
         $locator = new FileLocator();
         $loader = new YamlFileLoader($locator);
-
-        $metadatasAbsolute  = $loader->load( __DIR__ . '/../../../Resources/metadata/extended.yml' )->getMetadatas();
-        $metadatasEasy = $loader->load( 'extended.yml' )->getMetadatas();
+        
+        $metadatasAbsolute  = $loader->load(__DIR__ . '/../../../Resources/metadata/extended.yml')->getMetadatas();
+        $metadatasEasy = $loader->load('extended.yml')->getMetadatas();
 
         $this->assertEquals($metadatasAbsolute, $metadatasEasy);
     }
