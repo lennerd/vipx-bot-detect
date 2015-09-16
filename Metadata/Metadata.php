@@ -114,7 +114,7 @@ class Metadata implements MetadataInterface
     public function match($agent, $ip)
     {
         if ((self::AGENT_MATCH_EXACT === $this->agentMatch && $this->agent !== $agent) ||
-            (self::AGENT_MATCH_REGEXP === $this->agentMatch && !@preg_match('#' . $this->agent . '#', $agent))) {
+            (self::AGENT_MATCH_REGEXP === $this->agentMatch && strpos($agent, $this->agent)===false)) {
             return false;
         }
 
