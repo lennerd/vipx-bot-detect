@@ -13,9 +13,9 @@ namespace Vipx\BotDetect\Metadata;
 
 interface MetadataInterface
 {
-
     const AGENT_MATCH_EXACT = 'exact';
     const AGENT_MATCH_REGEXP = 'regexp';
+    const AGENT_MATCH_SUBSTRING = 'substring';
 
     const TYPE_BOT = 'bot';
     const TYPE_CRAWLER = 'crawler';
