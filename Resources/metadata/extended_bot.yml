@@ -1749,12 +1749,6 @@ bots:
         agent: 'Willow Internet Crawler'
         ip: null
         type: bot
-    'Unknow Bot': #This bot appears when posting link to Twitter
-        agent: 'Google-HTTP-Java-Client/1.17.0-rc (gzip)'
-        ip: 50.18.94.121
-    'Unknown Bot 2': #This bot appears when posting link to Twitter
-        agent: 'Mozilla/5.0 ()'
-        ip: 74.112.131.244
     Unister:
         agent: UnisterBot
         ip: null
