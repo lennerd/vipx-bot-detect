@@ -459,6 +459,10 @@ bots:
         agent: DailyPerfect
         ip: null
         type: bot
+    Dataminr:
+        agent: help@dataminr.com
+        ip: null
+        type: bot
     Daum:
         agent: Daumoa
         ip: null

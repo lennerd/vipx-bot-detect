@@ -126,6 +126,12 @@ bots:
         ip: null
         type: crawler
         meta: { email: 'http://www.tineye.com/crawler.html' }
+    'Unknow Crawler': #This crawler appears after link has been posted to Twitter
+        agent: 'Google-HTTP-Java-Client/1.17.0-rc (gzip)'
+        ip: 50.18.94.121
+    'Unknown Crawler 2': #This crawler appears after link has been posted to Twitter
+        agent: 'Mozilla/5.0 ()'
+        ip: 74.112.131.244
     VSW:
         agent: VSWCrawler
         ip: null
