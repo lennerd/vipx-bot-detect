@@ -14,10 +14,8 @@ matrix:
 
 before_script:
   - composer self-update
-  - /home/travis/.phpenv/versions/5.3/bin/composer self-update
-  - /home/travis/.phpenv/versions/5.4/bin/composer self-update
-  - if [[ $TRAVIS_PHP_VERSION = '5.3' || $TRAVIS_PHP_VERSION = '5.4' ]]; then COMPOSER_LEGACY_FLAGS="--prefer-lowest"; else COMPOSER_LEGACY_FLAGS=""; fi
-  - composer install --dev --prefer-source --no-interaction $COMPOSER_LEGACY_FLAGS
+  - if [[ $TRAVIS_PHP_VERSION = '5.3' || $TRAVIS_PHP_VERSION = '5.4' ]]; then COMPOSER_LEGACY_FLAGS="--prefer-lowest"; else COMPOSER_LEGACY_FLAGS="--prefer-source"; fi
+  - composer install --no-interaction $COMPOSER_LEGACY_FLAGS
 
 script:
   - mkdir -p build/logs
