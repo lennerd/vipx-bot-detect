@@ -14,7 +14,8 @@ matrix:
 
 before_script:
   - wget http://getcomposer.org/composer.phar
-  - php composer.phar install --dev --prefer-source --no-interaction
+  - if [[ $TRAVIS_PHP_VERSION = '5.3' || $TRAVIS_PHP_VERSION = '5.4' ]]; then COMPOSER_LEGACY_FLAGS="--prefer-lowest"; else COMPOSER_LEGACY_FLAGS=""; fi
+  - php composer.phar install $COMPOSER_FLAGS --dev --prefer-source --no-interaction $COMPOSER_LEGACY_FLAGS
 
 script:
   - mkdir -p build/logs
