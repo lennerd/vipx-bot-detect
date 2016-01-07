@@ -73,6 +73,12 @@ class BotDetectorTest extends \PHPUnit_Framework_TestCase
         $this->assertNull($detector->detect('VipxBot', '127.0.0.1'));
     }
 
+    public function testUserAgentTrim()
+    {
+        $detector = $this->createDetector();
+        $this->assertInstanceOf('Vipx\BotDetect\Metadata\MetadataInterface', $detector->detect(' Googlebot ', '127.0.0.1'));
+    }
+
     private function createDetector()
     {
         return new BotDetector($this->getLoader(), '/my/vipx/bot/file.yml');

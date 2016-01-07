@@ -61,6 +61,7 @@ bots:
         agent: MJ12bot/
         ip: null
         type: bot
+        meta: { website: 'http://www.majestic12.co.uk/bot.php' }
     Metager:
         agent: MetagerBot/
         ip: null
