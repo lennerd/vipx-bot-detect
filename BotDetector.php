@@ -109,6 +109,7 @@ class BotDetector implements BotDetectorInterface
      */
     public function detect($agent, $ip)
     {
+        $agent = trim($agent);
         foreach ($this->getMetadatas() as $metadata) {
             if ($metadata->match($agent, $ip)) {
                 return $metadata;
