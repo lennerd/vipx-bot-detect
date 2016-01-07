@@ -111,6 +111,11 @@ bots:
         ip: null
         type: crawler
         meta: { email: crawlers@postpo.st, website: 'http://postpo.st/crawlers' }
+    Scrapy:
+        agent: 'Scrapy'
+        ip: null
+        type: crawler
+        meta: { website: 'http://scrapy.org' }
     SISTRIX:
         agent: 'SISTRIX Crawler'
         ip: null
