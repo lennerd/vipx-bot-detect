@@ -83,11 +83,7 @@ bots:
         ip: null
         type: bot
     Nutch:
-        agent: 'http://lucene.apache.org/nutch/'
-        ip: null
-        type: bot
-    Nutch/CVS:
-        agent: NutchCVS/
+        agent: Nutch
         ip: null
         type: bot
     OmniExplorer:

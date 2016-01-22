@@ -996,6 +996,11 @@ bots:
         agent: Lycos
         ip: null
         type: bot
+    ltx71:
+        agent: ltx71
+        ip: null
+        type: bot
+        meta: { email: research@ltx71.com, website: 'http://ltx71.com/' }
     Mail.ru:
         agent: Mail.RU
         ip: null
