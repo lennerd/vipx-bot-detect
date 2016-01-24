@@ -8,6 +8,11 @@ bots:
         ip: null
         type: crawler
         meta: { website: 'https://www.botify.com' }        
+    BUbiNG:
+        agent: BUbiNG
+        ip: null
+        type: crawler
+        meta: { website: 'http://law.di.unimi.it/BUbiNG.html' }
     CRAWL-E:
         agent: CRAWL-E/
         ip: null
@@ -21,6 +26,11 @@ bots:
         agent: Crawler0.1
         ip: null
         type: crawler
+    'Domain Re-Animator':
+        agent: Domain Re-Animator
+        ip: null
+        type: crawler
+        meta: { email: support@domainreanimator.com, website: 'http://domainreanimator.com' }
     Enaball:
         agent: EnaBot
         ip: null
@@ -111,6 +121,11 @@ bots:
         ip: null
         type: crawler
         meta: { email: crawlers@postpo.st, website: 'http://postpo.st/crawlers' }
+    'SafeSearch microdata crawler':
+        agent: 'SafeSearch'
+        ip: null
+        type: crawler
+        meta: { email: safesearch-abuse@avira.com, website: 'https://safesearch.avira.com' }
     Scrapy:
         agent: 'Scrapy'
         ip: null
@@ -161,6 +176,11 @@ bots:
         ip: null
         type: crawler
         meta: { email: crawler@wikido.com, website: 'http://www.wikido.com/wikido.php' }
+    'Yahoo Japan':
+        agent: Y!J
+        ip: null
+        type: crawler
+        meta: { website: 'http://www.yahoo-help.jp/app/answers/detail/p/595/a_id/42716/' }
     'Yahoo! Search Marketing':
         agent: crawlx
         ip: null

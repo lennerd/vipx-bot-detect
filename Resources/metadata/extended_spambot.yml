@@ -53,6 +53,11 @@ bots:
         agent: EmailSiphon
         ip: null
         type: spambot
+    SpiDir:
+        agent: SpiDir.com
+        ip: null
+        type: spambot
+        meta: { website: 'https://www.aqtronix.com/useragents/?Action=ShowEdit&Name=SpiDir' }
     vectra-mods:
         agent: ''
         ip: 212.227.101.211
