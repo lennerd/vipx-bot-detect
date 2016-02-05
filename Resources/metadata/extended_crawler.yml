@@ -93,6 +93,11 @@ bots:
         agent: L.webis
         ip: null
         type: crawler
+    'MegaIndex.ru':
+        agent: MegaIndex.ru/
+        ip: null
+        type: crawler
+        meta: { website: 'http://megaindex.com/crawler' }
     'Metadata Labs':
         agent: MLBot
         ip: null
@@ -176,6 +181,11 @@ bots:
         ip: null
         type: crawler
         meta: { email: crawler@wikido.com, website: 'http://www.wikido.com/wikido.php' }
+    Worldwebheritage:
+        agent: '+crawl@worldwebheritage.org'
+        ip: null
+        type: crawler
+        meta: { email: crawl@worldwebheritage.org }
     'Yahoo Japan':
         agent: Y!J
         ip: null

@@ -567,6 +567,11 @@ bots:
         agent: Exabot-Thumbnails
         ip: null
         type: bot
+    Exploratodo:
+        agent: Exploratodo/
+        ip: null
+        type: bot
+        meta: { website: 'http://www.exploratodo.com' }
     Ezooms:
         agent: Ezooms
         ip: null
@@ -1493,6 +1498,11 @@ bots:
         agent: page_prefetcher
         ip: null
         type: bot
+    SemrushBot:
+        agent: SemrushBot/
+        ip: null
+        type: bot
+        meta: { website: 'http://www.semrush.com/bot.html' }
     SEOkicks:
         agent: SEOkicks
         ip: null
@@ -1851,6 +1861,11 @@ bots:
         agent: 'WWWeasel Robot v'
         ip: null
         type: bot
+    XoviBot:
+        agent: XoviBot/
+        ip: null
+        type: bot
+        meta: { website: 'http://www.xovibot.net/' }
     'XML Sitemap Generator':
         agent: 'XML Sitemaps Generator'
         ip: null
