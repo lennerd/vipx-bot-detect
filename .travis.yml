@@ -7,12 +7,14 @@ php:
   - 7
   - hhvm
 
+sudo: false
+
 cache:
   directories:
     - $HOME/.composer/cache/files
 
 env:
-  - SYMFONY_VERSION=2.3.*
+  - SYMFONY_VERSION=2.7.*
 
 matrix:
   allow_failures:
