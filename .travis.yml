@@ -25,7 +25,7 @@ matrix:
     - php: 7
       env: SYMFONY_VERSION=3.0.*@dev
 
-before_script:
+before_install:
   - composer self-update
   - composer require symfony/symfony:${SYMFONY_VERSION} --no-update
 
