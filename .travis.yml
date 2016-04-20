@@ -7,13 +7,29 @@ php:
   - 7
   - hhvm
 
+sudo: false
+
+cache:
+  directories:
+    - $HOME/.composer/cache/files
+
+env:
+  - SYMFONY_VERSION=2.7.*
+
 matrix:
   allow_failures:
     - php: 7
+  include:
+    - php: 5.6
+      env: SYMFONY_VERSION=3.0.*@dev
+    - php: 7
+      env: SYMFONY_VERSION=3.0.*@dev
 
-before_script:
-  - wget http://getcomposer.org/composer.phar
-  - php composer.phar install --dev --prefer-source --no-interaction
+before_install:
+  - composer self-update
+  - composer require symfony/symfony:${SYMFONY_VERSION} --no-update
+
+install: composer update --prefer-source
 
 script:
   - mkdir -p build/logs
