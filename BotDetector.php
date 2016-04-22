@@ -89,7 +89,7 @@ class BotDetector implements BotDetectorInterface
         $cache = new ConfigCache($this->options['cache_dir'] . '/' . $this->options['metadata_cache_file'], $this->options['debug']);
 
         if ($cache->isFresh()) {
-            return $this->metadatas = require $cache;
+            return $this->metadatas = require $cache->getPath();
         }
 
         /** @var $metadataCollection \Vipx\BotDetect\Metadata\MetadataCollection */
