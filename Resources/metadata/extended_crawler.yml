@@ -1,4 +1,9 @@
 bots:
+    Aboundex:
+        agent: Aboundex
+        ip: null
+        type: crawler
+        meta: { website: 'http://www.aboundex.com/crawler/' }
     'Amazon Elastic Cloud':
         agent: grvcrawler/
         ip: null
@@ -18,6 +23,16 @@ bots:
         ip: null
         type: crawler
         meta: { website: 'http://code.google.com/p/crawl-e/' }
+    CCBot:
+        agent: CCBot
+        ip: null
+        type: crawler
+        meta: { website: 'http://commoncrawl.org/faq/' }
+    Crawler4j:
+        agent: crawler4j
+        ip: null
+        type: crawler
+        meta: { website: 'http://code.google.com/p/crawler4j/' }
     'Crawler Search':
         agent: .Crawler-Search.de
         ip: null
@@ -26,6 +41,11 @@ bots:
         agent: Crawler0.1
         ip: null
         type: crawler
+    'Curious George':
+        agent: Curious George
+        ip: null
+        type: crawler
+        meta: { website: 'http://www.analyticsseo.com/crawler' }
     'Domain Re-Animator':
         agent: Domain Re-Animator
         ip: null
@@ -64,6 +84,11 @@ bots:
         agent: g2Crawler
         ip: null
         type: crawler
+    GetintentCrawler:
+        agent: GetintentCrawler
+        ip: null
+        type: crawler
+        meta: { website: 'http://getintent.com' }
     'Google Search Appliance':
         agent: gsa-crawler
         ip: null
@@ -80,6 +105,10 @@ bots:
         agent: 'ISC Open Index crawler'
         ip: null
         type: crawler
+    Istella:
+        agent: istellabot
+        ip: null
+        type: crawler
     JustSystems:
         agent: JUST-CRAWLER
         ip: null
@@ -89,6 +118,16 @@ bots:
         ip: null
         type: crawler
         meta: { email: admin@lemurproject.org, website: 'http://boston.lti.cs.cmu.edu/crawler_12' }
+    Linkapedia:
+        agent: linkapedia
+        ip: null
+        type: crawler
+        meta: { website: 'http://www.linkapedia.com' }
+    Livelap:
+        agent: LivelapBot
+        ip: null
+        type: crawler
+        meta: { website: 'http://site.livelap.com/crawler.html' }
     L.webis:
         agent: L.webis
         ip: null
@@ -107,6 +146,11 @@ bots:
         agent: msiecrawler
         ip: null
         type: crawler
+    'My Web Intelligence':
+        agent: My Web Intelligence crawler
+        ip: null
+        type: crawler
+        meta: { website: 'https://github.com/MyWebIntelligence/MyWebIntelligence' }
     netEstate:
         agent: '+http://www.sengine.info/'
         ip: null
@@ -126,16 +170,31 @@ bots:
         ip: null
         type: crawler
         meta: { email: crawlers@postpo.st, website: 'http://postpo.st/crawlers' }
+    Roger:
+        agent: rogerbot
+        ip: null
+        type: crawler
+        meta: { email: ogerbot-wherecat@moz.com, website: 'https://moz.com/help/guides/moz-procedures/what-is-rogerbot' }
+    SafeDNSBot:
+        agent: SafeDNSBot
+        ip: null
+        type: crawler
+        meta: { website: 'https://www.safedns.com/searchbot' }
     'SafeSearch microdata crawler':
-        agent: 'SafeSearch'
+        agent: SafeSearch
         ip: null
         type: crawler
         meta: { email: safesearch-abuse@avira.com, website: 'https://safesearch.avira.com' }
     Scrapy:
-        agent: 'Scrapy'
+        agent: Scrapy
         ip: null
         type: crawler
         meta: { website: 'http://scrapy.org' }
+    Seologies:
+        agent: Seologies/
+        ip: null
+        type: crawler
+        meta: { website: 'https://www.seologies.com/' }
     SISTRIX:
         agent: 'SISTRIX Crawler'
         ip: null
@@ -151,6 +210,16 @@ bots:
         ip: null
         type: crawler
         meta: { email: 'http://www.tineye.com/crawler.html' }
+    Toweya:
+        agent: Toweyabot
+        ip: null
+        type: crawler
+        meta: { website: 'http://toweya.com' }
+    Turnitin:
+        agent: TurnitinBot
+        ip: null
+        type: crawler
+        meta: { website: 'https://turnitin.com/robot/crawlerinfo.html' }
     'Unknow Crawler': #This crawler appears after link has been posted to Twitter
         agent: 'Google-HTTP-Java-Client/1.17.0-rc (gzip)'
         ip: 50.18.94.121
@@ -162,6 +231,11 @@ bots:
         ip: null
         type: crawler
         meta: { email: crawler@verticalsearchworks.com, website: 'http://ews.converasearch.com/crawl.htm' }
+    VegeBot:
+        agent: VegeBot
+        ip: null
+        type: crawler
+        meta: { email: abuse-report@terrykyleseoagency.com' }
     'VSW Convera':
         agent: ConveraCrawler
         ip: null
@@ -186,6 +260,11 @@ bots:
         ip: null
         type: crawler
         meta: { email: crawl@worldwebheritage.org }
+    Wotbox:
+        agent: Wotbox
+        ip: null
+        type: crawler
+        meta: { website: http://www.wotbox.com/bot/ }
     'Yahoo Japan':
         agent: Y!J
         ip: null
