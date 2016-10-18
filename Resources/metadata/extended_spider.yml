@@ -63,6 +63,11 @@ bots:
         agent: panscient.com
         ip: null
         type: spider
+    'Screaming Frog':
+        agent: 'Screaming Frog SEO Spider'
+        ip: null
+        type: spider
+        meta: { website: 'https://www.screamingfrog.co.uk/seo-spider/' }
     Sogou:
         agent: Sogou
         ip: null
