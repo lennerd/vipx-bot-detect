@@ -14,17 +14,17 @@ cache:
     - $HOME/.composer/cache/files
 
 env:
-  - SYMFONY_VERSION=2.3.*
   - SYMFONY_VERSION=2.7.*
+  - SYMFONY_VERSION=2.8.*
 
 matrix:
   include:
     - php: 5.6
-      env: SYMFONY_VERSION=3.0.*@dev
+      env: SYMFONY_VERSION=3.1.*@dev
     - php: 7.0
-      env: SYMFONY_VERSION=3.0.*@dev
+      env: SYMFONY_VERSION=3.1.*@dev
     - php: 7.1
-      env: SYMFONY_VERSION=3.0.*@dev
+      env: SYMFONY_VERSION=3.1.*@dev
 
 before_install:
   - composer self-update
