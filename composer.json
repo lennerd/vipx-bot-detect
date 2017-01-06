@@ -23,7 +23,6 @@
     "autoload": {
         "psr-4": { "Vipx\\BotDetect\\": "" }
     },
-    "target-dir": "Vipx/BotDetect",
     "extra": {
         "branch-alias": {
             "dev-master": "1.2.x-dev"
