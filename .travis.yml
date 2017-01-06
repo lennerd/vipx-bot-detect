@@ -35,6 +35,7 @@ install: composer update --prefer-source
 
 script:
   - mkdir -p build/logs
+  - composer validate
   - phpunit --coverage-clover build/logs/clover.xml
 
 after_script: php vendor/bin/coveralls -v
