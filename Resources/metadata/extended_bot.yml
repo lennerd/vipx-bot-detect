@@ -288,6 +288,11 @@ bots:
         agent: Bookdog
         ip: null
         type: bot
+    Botify:
+        agent: botify
+        ip: null
+        type: bot
+        meta: { website: 'https://www.botify.com' }
     Brandwatch:
         agent: ''
         agent_match: exact
