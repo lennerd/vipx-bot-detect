@@ -13,13 +13,12 @@ namespace Vipx\BotDetect\Metadata;
 
 class Metadata implements MetadataInterface
 {
-
     private $name;
     private $agent;
     private $ip = null;
     private $type = self::TYPE_BOT;
     private $meta = array();
-    private $agentMatch = self::AGENT_MATCH_REGEXP;
+    private $agentMatch = self::AGENT_MATCH_SUBSTRING;
 
     /**
      * @param string $name
@@ -113,7 +112,8 @@ class Metadata implements MetadataInterface
      */
     public function match($agent, $ip)
     {
-        if ((self::AGENT_MATCH_EXACT === $this->agentMatch && $this->agent !== $agent) ||
+        if ((self::AGENT_MATCH_SUBSTRING === $this->agentMatch && strpos($agent, $this->agent)===false) ||
+            (self::AGENT_MATCH_EXACT === $this->agentMatch && $this->agent !== $agent) ||
             (self::AGENT_MATCH_REGEXP === $this->agentMatch && !@preg_match('#' . $this->agent . '#', $agent))) {
             return false;
         }
