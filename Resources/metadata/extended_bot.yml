@@ -1036,6 +1036,11 @@ bots:
         ip: null
         type: bot
         meta: { website: 'http://mergeflow.net/info/pagereader' }
+    MetaComment:
+        agent: MetaCommentBot
+        ip: null
+        type: bot
+        meta: { website: 'http://metacomment.io/about' }
     Metaspinner:
         agent: Metaspinner
         ip: null
@@ -1045,6 +1050,11 @@ bots:
         ip: null
         type: bot
         meta: { email: info@metauri.com, website: 'http://metauri.com' }
+    Mfi:
+        agent: 'mfibot/'
+        ip: null
+        type: bot
+        meta: { email: admin@mfisoft.ru, website: 'http://www.mfisoft.ru/analyst/' }
     'Microsoft Academic Search':
         agent: librabot
         ip: null
@@ -1591,6 +1601,15 @@ bots:
         agent: SKIZZLE
         ip: null
         type: bot
+    Slackbot:
+        agent: Slackbot
+        ip: null
+        type: bot
+        meta: { website: 'https://api.slack.com/robots' }
+    Skizzle:
+        agent: SKIZZLE
+        ip: null
+        type: bot
     'Snap Shots':
         agent: Snapbot
         ip: null
@@ -1672,6 +1691,10 @@ bots:
         meta: { website: 'http://www.talktalk.co.uk' }
     Tbot:
         agent: Tbot/
+        ip: null
+        type: bot
+    Telegram:
+        agent: TelegramBot
         ip: null
         type: bot
     'The Best Links':
