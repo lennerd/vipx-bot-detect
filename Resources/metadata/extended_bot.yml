@@ -1068,7 +1068,7 @@ bots:
         ip: null
         type: bot
     'Microsoft Bot':
-        agent: ''        
+        agent: ''
         ip: 23.96.208.137
         type: bot
     'Microsoft Research':
@@ -1606,10 +1606,6 @@ bots:
         ip: null
         type: bot
         meta: { website: 'https://api.slack.com/robots' }
-    Skizzle:
-        agent: SKIZZLE
-        ip: null
-        type: bot
     'Snap Shots':
         agent: Snapbot
         ip: null

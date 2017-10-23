@@ -11,9 +11,10 @@
 
 namespace Vipx\BotDetect\Tests;
 
+use PHPUnit\Framework\TestCase;
 use Vipx\BotDetect\Metadata\Metadata;
 
-class MetadataTest extends \PHPUnit_Framework_TestCase
+class MetadataTest extends TestCase
 {
 
     public function testMatchRegexp()

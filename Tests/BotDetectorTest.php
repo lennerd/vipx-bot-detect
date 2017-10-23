@@ -11,12 +11,14 @@
 
 namespace Vipx\BotDetect\Tests;
 
+use PHPUnit\Framework\TestCase;
 use Vipx\BotDetect\BotDetector;
+use Symfony\Component\Config\Loader\LoaderInterface;
 use Symfony\Component\Config\FileLocator;
 use Vipx\BotDetect\Metadata\Loader\YamlFileLoader;
 use Vipx\BotDetect\Metadata\MetadataInterface;
 
-class BotDetectorTest extends \PHPUnit_Framework_TestCase
+class BotDetectorTest extends TestCase
 {
 
     private $metadatas;
@@ -87,7 +89,8 @@ class BotDetectorTest extends \PHPUnit_Framework_TestCase
     private function getLoader()
     {
         if (null === $this->loader) {
-            $loader = $this->getMock('Symfony\Component\Config\Loader\LoaderInterface');
+            $loader = $this->getMockBuilder(LoaderInterface::class)
+                ->getMock();
 
             $loader->expects($this->any())
                 ->method('load')
@@ -102,7 +105,8 @@ class BotDetectorTest extends \PHPUnit_Framework_TestCase
     private function getMetadatas()
     {
         if (null === $this->metadatas) {
-            $googleBot = $this->getMock('Vipx\BotDetect\Metadata\MetadataInterface');
+            $googleBot = $this->getMockBuilder(MetadataInterface::class)
+                ->getMock();
 
             $googleBot->expects($this->any())
                 ->method('match')

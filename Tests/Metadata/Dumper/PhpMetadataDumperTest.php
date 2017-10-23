@@ -11,10 +11,11 @@
 
 namespace Vipx\BotDetectBundle\Tests\Dumper;
 
+use PHPUnit\Framework\TestCase;
 use Vipx\BotDetect\Metadata\Dumper\PhpMetadataDumper;
 use Vipx\BotDetect\Metadata\MetadataInterface;
 
-class PhpMetadataDumperTest extends \PHPUnit_Framework_TestCase
+class PhpMetadataDumperTest extends TestCase
 {
 
     private $metadatas;
@@ -25,7 +26,8 @@ class PhpMetadataDumperTest extends \PHPUnit_Framework_TestCase
     {
         parent::setUp();
 
-        $metadata = $this->getMock('Vipx\BotDetect\Metadata\MetadataInterface');
+        $metadata = $this->getMockBuilder(MetadataInterface::class)
+            ->getMock();
 
         $metadata->expects($this->any())
             ->method('getAgent')

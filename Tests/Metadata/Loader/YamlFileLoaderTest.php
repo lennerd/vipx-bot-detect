@@ -11,11 +11,12 @@
 
 namespace Vipx\BotDetect\Tests\Loader;
 
+use PHPUnit\Framework\TestCase;
 use Vipx\BotDetect\Metadata\Loader\YamlFileLoader;
 use Symfony\Component\Config\FileLocator;
 use Vipx\BotDetect\Metadata\MetadataInterface;
 
-class YamlFileLoaderTest extends \PHPUnit_Framework_TestCase
+class YamlFileLoaderTest extends TestCase
 {
 
     public function testSupport()
@@ -31,7 +32,7 @@ class YamlFileLoaderTest extends \PHPUnit_Framework_TestCase
     {
         $locator = new FileLocator();
         $loader = new YamlFileLoader($locator);
-        
+
         $metadatasAbsolute  = $loader->load(__DIR__ . '/../../../Resources/metadata/extended.yml')->getMetadatas();
         $metadatasEasy = $loader->load('extended.yml')->getMetadatas();
 

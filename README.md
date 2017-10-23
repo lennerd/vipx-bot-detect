@@ -2,7 +2,7 @@
 
 This library helps you detecting bots like Google, Yahoo or Bing.
 
-[![Build Status](https://secure.travis-ci.org/lennerd/vipx-bot-detect.png)](http://travis-ci.org/lennerd/vipx-bot-detect)
+[![Build Status](https://travis-ci.org/lennerd/vipx-bot-detect.svg?branch=master)](https://travis-ci.org/lennerd/vipx-bot-detect)
 [![Coverage Status](https://img.shields.io/coveralls/lennerd/vipx-bot-detect.svg)](https://coveralls.io/r/lennerd/vipx-bot-detect?branch=master)
 
 ## Installation using [composer](https://getcomposer.org/)
@@ -30,7 +30,7 @@ $detector = new BotDetector($loader, $metadataFile);
 # Call detect() on BotDetector, passing in a user agent string and IP address,
 # most commonly found in $_SERVER['HTTP_USER_AGENT'] and $_SERVER['REQUEST_ADDR']
 # respectively.
-# detect() will return a Vipx\BotDetect\Metadata\Metadata object containing the 
+# detect() will return a Vipx\BotDetect\Metadata\Metadata object containing the
 # details of a matched bot and null on no match.
 $bot = $detector->detect($agent, $ip);
 ```

@@ -1,11 +1,9 @@
 language: php
 
 php:
-  - 5.5
   - 5.6
   - 7.0
   - 7.1
-  - hhvm
 
 sudo: false
 
@@ -16,28 +14,35 @@ cache:
 env:
   - SYMFONY_VERSION=2.7.*
   - SYMFONY_VERSION=2.8.*
+  - SYMFONY_VERSION=3.2.*
+  - SYMFONY_VERSION=3.4.*
 
 matrix:
+  fast_finish: true
   include:
-    - php: 5.6
-      env: SYMFONY_VERSION=3.1.*@dev
-    - php: 7.0
-      env: SYMFONY_VERSION=3.1.*@dev
     - php: 7.1
-      env: SYMFONY_VERSION=3.1.*@dev
+      env: SYMFONY_VERSION='4.0.*'
+    - php: hhvm
+      dist: trusty
 
 before_install:
-  - composer validate
-  - composer self-update
-  - composer require symfony/symfony:${SYMFONY_VERSION} --no-update
+  - if [ "$SYMFONY_VERSION" != "" ]; then composer require --dev --no-update symfony/symfony=$SYMFONY_VERSION; fi
 
-install: composer update --prefer-source
+install:
+  # Install dependencies
+  - composer update --prefer-dist --prefer-stable
+  # Install Coveralls
+  - wget -c -nc --retry-connrefused --tries=0 https://github.com/satooshi/php-coveralls/releases/download/v1.0.1/coveralls.phar
+  - chmod +x coveralls.phar
+  - php coveralls.phar --version
 
 script:
   - mkdir -p build/logs
-  - phpunit --coverage-clover build/logs/clover.xml
+  - ./vendor/bin/phpunit --coverage-clover build/logs/clover.xml
 
-after_script: php vendor/bin/coveralls -v
+after_success:
+  - ls -l build/logs
+  - travis_retry php coveralls.phar -v
 
 notifications:
   email:
