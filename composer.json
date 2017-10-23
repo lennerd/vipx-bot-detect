@@ -1,6 +1,6 @@
 {
     "name": "vipx/bot-detect",
-    "type": "symfony-bundle",
+    "type": "library",
     "description": "Bot detector library",
     "keywords": ["Bot"],
     "homepage": "http://lennerd.com/",
