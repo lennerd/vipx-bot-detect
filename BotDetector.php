@@ -89,8 +89,8 @@ class BotDetector implements BotDetectorInterface
         $cache = new ConfigCache($this->options['cache_dir'] . '/' . $this->options['metadata_cache_file'], $this->options['debug']);
 
         if ($cache->isFresh()) {
-            if (method_exists($cache, '__toString')) {
-                // ConfigCache Symfony < 3.0 syntax.
+            if (!method_exists($cache, 'getPath')) {
+                // ConfigCache Symfony < 2.7 syntax.
                 return $this->metadatas = require $cache;
             }
 
