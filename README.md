@@ -35,6 +35,18 @@ $detector = new BotDetector($loader, $metadataFile);
 $bot = $detector->detect($agent, $ip);
 ```
 
+**Note:** To greatly improve performance, `BotDetector` has a built in cache, which can be used to speed up parsing and loading of metadata.
+
+``` php
+# Instantiate a BotDetector with additional options.
+$detector = new BotDetector($loader, $metadataFile, [
+  'debug' => $debug,
+  'cache_dir' => '/acme/cache',
+]);
+```
+
+Via additional options `metadata_cache_file` and `metadata_dumper_class` you can further control how cache files are named or generated.
+
 ## ToDo's
 
 - Add additional meta data loaders (xml, php)
