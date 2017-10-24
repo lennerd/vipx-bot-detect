@@ -45,7 +45,7 @@ class BotDetector implements BotDetectorInterface
             'cache_dir'             => null,
             'debug'                 => false,
             'metadata_cache_file'   => 'project_vipx_bot_detect_metadata.php',
-            'metadata_dumper_class' => 'Vipx\\BotDetect\\Metadata\\Dumper\\MetadataDumper',
+            'metadata_dumper_class' => 'Vipx\\BotDetect\\Metadata\\Dumper\\PHPMetadataDumper',
         );
 
         // check option names and live merge, if errors are encountered Exception will be thrown
@@ -83,30 +83,28 @@ class BotDetector implements BotDetectorInterface
         }
 
         if (null === $this->options['cache_dir'] || null === $this->options['metadata_cache_file']) {
-            return $this->metadatas = $this->loader->load($this->resource);
+            $metadataCollection = $this->loader->load($this->resource);
+
+            return $this->metadatas = $metadataCollection->getMetadatas();
         }
 
         $cache = new ConfigCache($this->options['cache_dir'] . '/' . $this->options['metadata_cache_file'], $this->options['debug']);
 
         if ($cache->isFresh()) {
-            if (!method_exists($cache, 'getPath')) {
-                // ConfigCache Symfony < 2.7 syntax.
-                return $this->metadatas = require $cache;
-            }
-
             return $this->metadatas = require $cache->getPath();
         }
 
         /** @var $metadataCollection \Vipx\BotDetect\Metadata\MetadataCollection */
         $metadataCollection = $this->loader->load($this->resource);
         $dumperClass = $this->options['metadata_dumper_class'];
+        $metadatas = $metadataCollection->getMetadatas();
 
         /** @var $dumper \Vipx\BotDetect\Metadata\Dumper\MetadataDumper */
-        $dumper = new $dumperClass($metadataCollection->getMetadatas());
+        $dumper = new $dumperClass($metadatas);
 
         $cache->write($dumper->dump(), $metadataCollection->getResources());
 
-        return $this->metadatas = $metadataCollection;
+        return $this->metadatas = $metadatas;
     }
 
     /**

@@ -15,14 +15,17 @@ use PHPUnit\Framework\TestCase;
 use Vipx\BotDetect\BotDetector;
 use Symfony\Component\Config\Loader\LoaderInterface;
 use Symfony\Component\Config\FileLocator;
+use Symfony\Component\Config\Resource\FileResource;
 use Vipx\BotDetect\Metadata\Loader\YamlFileLoader;
-use Vipx\BotDetect\Metadata\MetadataInterface;
+use Vipx\BotDetect\Metadata\Metadata;
+use Vipx\BotDetect\Metadata\MetadataCollection;
 
 class BotDetectorTest extends TestCase
 {
 
-    private $metadatas;
+    private $metadataCollection;
     private $loader;
+    private $cacheFile;
 
     /**
      * @expectedException \InvalidArgumentException
@@ -50,21 +53,54 @@ class BotDetectorTest extends TestCase
         $this->assertTrue($options['debug']);
     }
 
+    public function testMetadata()
+    {
+        $detector = $this->createDetector();
+        $metadataCollection = $this->getMetadataCollection();
+
+        $this->assertEquals($metadataCollection->getMetadatas(), $detector->getMetadatas());
+    }
+
     public function testCacheOptions()
     {
         $cacheFile = tempnam(sys_get_temp_dir(), 'vipx_bot_detect_test_metadata_');
 
         $options = array(
+            'debug' => true,
             'cache_dir' => dirname($cacheFile),
             'metadata_cache_file' => basename($cacheFile),
         );
 
+        $metadataCollection = $this->getMetadataCollection();
+
+        $metadataCollection->expects($this->any())
+            ->method('getResources')
+            ->willReturn(array(
+                new FileResource($cacheFile),
+            ));
+
         $detector = $this->createDetector();
         $detector->setOptions($options);
 
-        $this->assertEquals(require $cacheFile, $detector->getMetadatas());
+        try {
+            unlink($cacheFile);
 
-        unlink($cacheFile);
+            $this->assertNotNull($detector->detect('Googlebot', '127.0.0.1'));
+            $this->assertTrue(\file_exists($cacheFile));
+
+            $cachedDetector = $this->createDetector();
+            $cachedDetector->setOptions($options);
+
+            $this->assertNotNull($cachedDetector->detect('Googlebot', '127.0.0.1'));
+        } finally {
+            $files = array($cacheFile, $cacheFile . '.meta');
+
+            foreach ($files as $file) {
+                if (file_exists($file)) {
+                    unlink($file);
+                }
+            }
+        }
     }
 
     public function testDetection()
@@ -94,7 +130,7 @@ class BotDetectorTest extends TestCase
 
             $loader->expects($this->any())
                 ->method('load')
-                ->will($this->returnValue($this->getMetadatas()));
+                ->will($this->returnValue($this->getMetadataCollection()));
 
             $this->loader = $loader;
         }
@@ -102,24 +138,30 @@ class BotDetectorTest extends TestCase
         return $this->loader;
     }
 
-    private function getMetadatas()
+    private function getMetadataCollection()
     {
-        if (null === $this->metadatas) {
-            $googleBot = $this->getMockBuilder(MetadataInterface::class)
-                ->getMock();
+        if (null === $this->metadataCollection) {
+            $googleBot = new Metadata('Googlebot', 'Googlebot', '127.0.0.1');
 
-            $googleBot->expects($this->any())
-                ->method('match')
-                ->will($this->returnCallback(function($agent, $ip) {
-                    return $agent == 'Googlebot' && $ip === '127.0.0.1';
-                }));
-
-            $this->metadatas = array(
+            $metadatas = array(
                 $googleBot,
             );
+
+            $this->metadataCollection = $this->getMockBuilder(MetadataCollection::class)
+                ->getMock();
+
+            $this->metadataCollection->expects($this->any())
+                ->method('getIterator')
+                ->will($this->returnCallback(function() use ($metadatas) {
+                    return new \ArrayIterator($metadatas);
+                }));
+
+            $this->metadataCollection->expects($this->any())
+                ->method('getMetadatas')
+                ->willReturn($metadatas);
         }
 
-        return $this->metadatas;
+        return $this->metadataCollection;
     }
 
 }
