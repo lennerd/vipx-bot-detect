@@ -45,7 +45,7 @@ class BotDetector implements BotDetectorInterface
             'cache_dir'             => null,
             'debug'                 => false,
             'metadata_cache_file'   => 'project_vipx_bot_detect_metadata.php',
-            'metadata_dumper_class' => 'Vipx\\BotDetect\\Metadata\\Dumper\\PHPMetadataDumper',
+            'metadata_dumper_class' => 'Vipx\\BotDetect\\Metadata\\Dumper\\PhpMetadataDumper',
         );
 
         // check option names and live merge, if errors are encountered Exception will be thrown
