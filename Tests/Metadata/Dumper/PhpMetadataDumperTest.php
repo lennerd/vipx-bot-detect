@@ -34,8 +34,8 @@ class PhpMetadataDumperTest extends TestCase
             ->willReturn('TestBot');
 
         $metadata
-            ->method('getIp')
-            ->willReturn(null);
+            ->method('getIps')
+            ->willReturn([]);
 
         $metadata
             ->method('getType')

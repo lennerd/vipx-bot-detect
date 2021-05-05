@@ -16,7 +16,7 @@ class Metadata implements MetadataInterface
 
     private $name;
     private $agent;
-    private $ip;
+    private $ips;
     private $type = self::TYPE_BOT;
     private $meta = [];
     private $agentMatch = self::AGENT_MATCH_REGEXP;
@@ -29,11 +29,11 @@ class Metadata implements MetadataInterface
      * @param array $meta
      * @param string $agentMatch
      */
-    public function __construct(string $name, string $agent, $ip = null)
+    public function __construct(string $name, string $agent, array $ips = [])
     {
         $this->name = $name;
         $this->agent = $agent;
-        $this->ip = $ip;
+        $this->ips = $ips;
     }
 
     /**
@@ -87,9 +87,9 @@ class Metadata implements MetadataInterface
     /**
      * {@inheritdoc}
      */
-    public function getIp()
+    public function getIps(): array
     {
-        return $this->ip;
+        return $this->ips;
     }
 
     /**
@@ -111,22 +111,21 @@ class Metadata implements MetadataInterface
     /**
      * {@inheritdoc}
      */
-    public function match(string $agent, string $ip): bool
+    public function match(string $agent, ?string $ip): bool
     {
-        if ((self::AGENT_MATCH_EXACT === $this->agentMatch && $this->agent !== $agent) ||
-            (self::AGENT_MATCH_REGEXP === $this->agentMatch && !@preg_match('#'.$this->agent.'#', $agent))) {
-            return false;
+        $agentMatches = false;
+
+        if (self::AGENT_MATCH_EXACT === $this->agentMatch && $agent === $this->agent) {
+            $agentMatches = true;
+        } elseif (self::AGENT_MATCH_REGEXP === $this->agentMatch && preg_match('#'.$this->agent.'#', $agent)) {
+            $agentMatches = true;
         }
 
-        if (is_null($this->ip)) {
-            return true;
+        if (null === $ip || [] === $this->ips) {
+            return $agentMatches;
         }
 
-        if (is_array($this->ip)) {
-            return in_array($ip, $this->ip, true);
-        }
-
-        return $this->ip === $ip;
+        return $agentMatches && \in_array($ip, $this->ips, true);
     }
 
 }

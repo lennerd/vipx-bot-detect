@@ -35,10 +35,10 @@ interface MetadataInterface
      * Returns true if the given agent and ip matches the agent and ip of the bot
      *
      * @param string $agent
-     * @param string $ip
+     * @param string|null $ip
      * @return bool
      */
-    public function match(string $agent, string $ip): bool;
+    public function match(string $agent, ?string $ip): bool;
 
     /**
      * Returns the agent of the bot
@@ -55,11 +55,11 @@ interface MetadataInterface
     public function getAgentMatch(): string;
 
     /**
-     * Returns the ip of the bot
+     * Returns the ips of the bot (if any)
      *
-     * @return null|string|array
+     * @return array
      */
-    public function getIp();
+    public function getIps(): array;
 
     /**
      * Returns the type of the bot

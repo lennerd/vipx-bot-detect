@@ -50,7 +50,7 @@ EOF;
                 get_class($metadata),
                 $name,
                 $metadata->getAgent(),
-                var_export($metadata->getIp(), true)
+                var_export($metadata->getIps(), true)
             );
 
             $type = $metadata->getType();

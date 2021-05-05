@@ -55,14 +55,14 @@ class YamlFileLoaderTest extends TestCase
         $metadata = $metadatas['Googlebot'];
 
         self::assertEquals('Googlebot', $metadata->getAgent());
-        self::assertEquals(null, $metadata->getIp());
+        self::assertEquals([], $metadata->getIps());
         self::assertEquals(MetadataInterface::TYPE_BOT, $metadata->getType());
 
         /** @var $metadata Metadata */
         $metadata = $metadatas['vectra-mods'];
 
         self::assertEquals('', $metadata->getAgent());
-        self::assertEquals('212.227.101.211', $metadata->getIp());
+        self::assertEquals(['212.227.101.211'], $metadata->getIps());
         self::assertEquals(MetadataInterface::TYPE_SPAMBOT, $metadata->getType());
     }
 

@@ -36,7 +36,7 @@ class MetadataTest extends TestCase
 
     public function testMatchIp(): void
     {
-        $metadata = $this->createMetadata('test', '127.0.0.1');
+        $metadata = $this->createMetadata('test', ['127.0.0.1']);
 
         self::assertTrue($metadata->match('test', '127.0.0.1'));
         self::assertFalse($metadata->match('test', '127.0.0.2'));
@@ -70,9 +70,9 @@ class MetadataTest extends TestCase
         self::assertEquals($match, $metadata->getAgentMatch());
     }
 
-    private function createMetadata($agent, $ip = null): Metadata
+    private function createMetadata(string $agent, array $ips = []): Metadata
     {
-        $metadata = new Metadata('TestBot', $agent, $ip);
+        $metadata = new Metadata('TestBot', $agent, $ips);
         $metadata->setAgentMatch(Metadata::AGENT_MATCH_EXACT);
 
         return $metadata;

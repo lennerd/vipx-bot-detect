@@ -151,7 +151,7 @@ class BotDetectorTest extends TestCase
     private function getMetadataCollection(): MetadataCollection
     {
         if (null === $this->metadataCollection) {
-            $googleBot = new Metadata('Googlebot', 'Googlebot', '127.0.0.1');
+            $googleBot = new Metadata('Googlebot', 'Googlebot', ['127.0.0.1']);
 
             $metadatas = [
                 $googleBot,

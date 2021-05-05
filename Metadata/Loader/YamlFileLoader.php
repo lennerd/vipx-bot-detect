@@ -94,8 +94,8 @@ class YamlFileLoader extends FileLoader
         }
 
         foreach ($content['bots'] as $name => $bot) {
-            $ip = $bot['ip'] ?? null;
-            $metadata = new Metadata($name, $bot['agent'], $ip);
+            $ip = $bot['ip'] ?? [];
+            $metadata = new Metadata($name, $bot['agent'], (array) $ip);
 
             if (isset($bot['type'])) {
                 $metadata->setType($bot['type']);
