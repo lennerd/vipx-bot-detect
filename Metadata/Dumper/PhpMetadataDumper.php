@@ -19,7 +19,7 @@ class PhpMetadataDumper extends MetadataDumper
     /**
      * {@inheritdoc}
      */
-    public function dump()
+    public function dump(): string
     {
         return <<<EOF
 <?php
@@ -37,19 +37,21 @@ return \$metdatas;
 EOF;
     }
 
-    private function dumpMetadatas()
+    private function dumpMetadatas(): string
     {
         $metadatas = $this->getMetadatas();
-        $dump = array();
+        $dump = [];
 
         foreach ($metadatas as $name => $metadata) {
             /* $ip = null, $type = self::TYPE_BOT, $agentMatch = self::AGENT_MATCH_REGEXP */
-            $dump[] = sprintf("\$metdatas['%s'] = new %s('%s', '%s', %s);",
+            $dump[] = sprintf(
+                "\$metdatas['%s'] = new %s('%s', '%s', %s);",
                 $name,
                 get_class($metadata),
                 $name,
                 $metadata->getAgent(),
-                var_export($metadata->getIp(), true));
+                var_export($metadata->getIp(), true)
+            );
 
             $type = $metadata->getType();
 

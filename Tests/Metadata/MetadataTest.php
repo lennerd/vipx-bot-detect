@@ -17,7 +17,7 @@ use Vipx\BotDetect\Metadata\Metadata;
 class MetadataTest extends TestCase
 {
 
-    public function testMatchRegexp()
+    public function testMatchRegexp(): void
     {
         $metadata = $this->createMetadata('test');
         $metadata->setAgentMatch(Metadata::AGENT_MATCH_REGEXP);
@@ -26,7 +26,7 @@ class MetadataTest extends TestCase
         $this->assertFalse($metadata->match('foo', '127.0.0.1'));
     }
 
-    public function testMatchExact()
+    public function testMatchExact(): void
     {
         $metadata = $this->createMetadata('test');
 
@@ -34,7 +34,7 @@ class MetadataTest extends TestCase
         $this->assertFalse($metadata->match('test-agent', '127.0.0.1'));
     }
 
-    public function testMatchIp()
+    public function testMatchIp(): void
     {
         $metadata = $this->createMetadata('test', '127.0.0.1');
 
@@ -42,17 +42,17 @@ class MetadataTest extends TestCase
         $this->assertFalse($metadata->match('test', '127.0.0.2'));
     }
 
-    public function testMatchIpArray()
+    public function testMatchIpArray(): void
     {
-        $metadata = $this->createMetadata('test', array('127.0.0.1', '127.0.0.2'));
+        $metadata = $this->createMetadata('test', ['127.0.0.1', '127.0.0.2']);
 
         $this->assertTrue($metadata->match('test', '127.0.0.1'));
         $this->assertFalse($metadata->match('test', '127.0.0.3'));
     }
 
-    public function testMeta()
+    public function testMeta(): void
     {
-        $meta = array('foo' => 'bar');
+        $meta = ['foo' => 'bar'];
 
         $metadata = $this->createMetadata('test');
         $metadata->setMeta($meta);
@@ -60,7 +60,7 @@ class MetadataTest extends TestCase
         $this->assertEquals($meta, $metadata->getMeta());
     }
 
-    public function testAgentMatch()
+    public function testAgentMatch(): void
     {
         $match = Metadata::AGENT_MATCH_REGEXP;
 
@@ -70,7 +70,7 @@ class MetadataTest extends TestCase
         $this->assertEquals($match, $metadata->getAgentMatch());
     }
 
-    private function createMetadata($agent, $ip = null)
+    private function createMetadata($agent, $ip = null): Metadata
     {
         $metadata = new Metadata('TestBot', $agent, $ip, Metadata::TYPE_BOT);
         $metadata->setAgentMatch(Metadata::AGENT_MATCH_EXACT);

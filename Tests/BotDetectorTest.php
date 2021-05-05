@@ -13,11 +13,9 @@ namespace Vipx\BotDetect\Tests;
 
 use InvalidArgumentException;
 use PHPUnit\Framework\TestCase;
-use Vipx\BotDetect\BotDetector;
 use Symfony\Component\Config\Loader\LoaderInterface;
-use Symfony\Component\Config\FileLocator;
 use Symfony\Component\Config\Resource\FileResource;
-use Vipx\BotDetect\Metadata\Loader\YamlFileLoader;
+use Vipx\BotDetect\BotDetector;
 use Vipx\BotDetect\Metadata\Metadata;
 use Vipx\BotDetect\Metadata\MetadataCollection;
 
@@ -26,23 +24,24 @@ class BotDetectorTest extends TestCase
 
     private $metadataCollection;
     private $loader;
-    private $cacheFile;
 
-    public function testInvalidOptions()
+    public function testInvalidOptions(): void
     {
         $this->expectException(InvalidArgumentException::class);
         $detector = $this->createDetector();
 
-        $detector->setOptions(array(
-            'invalid_options' => 'value'
-        ));
+        $detector->setOptions(
+            [
+                'invalid_options' => 'value',
+            ]
+        );
     }
 
-    public function testValidOptions()
+    public function testValidOptions(): void
     {
-        $options = array(
-            'debug' => true
-        );
+        $options = [
+            'debug' => true,
+        ];
 
         $detector = $this->createDetector();
         $detector->setOptions($options);
@@ -52,7 +51,7 @@ class BotDetectorTest extends TestCase
         $this->assertTrue($options['debug']);
     }
 
-    public function testMetadata()
+    public function testMetadata(): void
     {
         $detector = $this->createDetector();
         $metadataCollection = $this->getMetadataCollection();
@@ -60,23 +59,25 @@ class BotDetectorTest extends TestCase
         $this->assertEquals($metadataCollection->getMetadatas(), $detector->getMetadatas());
     }
 
-    public function testCacheOptions()
+    public function testCacheOptions(): void
     {
         $cacheFile = tempnam(sys_get_temp_dir(), 'vipx_bot_detect_test_metadata_');
 
-        $options = array(
+        $options = [
             'debug' => true,
             'cache_dir' => dirname($cacheFile),
             'metadata_cache_file' => basename($cacheFile),
-        );
+        ];
 
         $metadataCollection = $this->getMetadataCollection();
 
         $metadataCollection->expects($this->any())
             ->method('getResources')
-            ->willReturn(array(
-                new FileResource($cacheFile),
-            ));
+            ->willReturn(
+                [
+                    new FileResource($cacheFile),
+                ]
+            );
 
         $detector = $this->createDetector();
         $detector->setOptions($options);
@@ -92,7 +93,7 @@ class BotDetectorTest extends TestCase
 
             $this->assertNotNull($cachedDetector->detect('Googlebot', '127.0.0.1'));
         } finally {
-            $files = array($cacheFile, $cacheFile . '.meta');
+            $files = [$cacheFile, $cacheFile.'.meta'];
 
             foreach ($files as $file) {
                 if (file_exists($file)) {
@@ -102,21 +103,27 @@ class BotDetectorTest extends TestCase
         }
     }
 
-    public function testDetection()
+    public function testDetection(): void
     {
         $detector = $this->createDetector();
 
-        $this->assertInstanceOf('Vipx\BotDetect\Metadata\MetadataInterface', $detector->detect('Googlebot', '127.0.0.1'));
+        $this->assertInstanceOf(
+            'Vipx\BotDetect\Metadata\MetadataInterface',
+            $detector->detect('Googlebot', '127.0.0.1')
+        );
         $this->assertNull($detector->detect('VipxBot', '127.0.0.1'));
     }
 
-    public function testUserAgentTrim()
+    public function testUserAgentTrim(): void
     {
         $detector = $this->createDetector();
-        $this->assertInstanceOf('Vipx\BotDetect\Metadata\MetadataInterface', $detector->detect(' Googlebot ', '127.0.0.1'));
+        $this->assertInstanceOf(
+            'Vipx\BotDetect\Metadata\MetadataInterface',
+            $detector->detect(' Googlebot ', '127.0.0.1')
+        );
     }
 
-    private function createDetector()
+    private function createDetector(): BotDetector
     {
         return new BotDetector($this->getLoader(), '/my/vipx/bot/file.yml');
     }
@@ -137,23 +144,27 @@ class BotDetectorTest extends TestCase
         return $this->loader;
     }
 
-    private function getMetadataCollection()
+    private function getMetadataCollection(): MetadataCollection
     {
         if (null === $this->metadataCollection) {
             $googleBot = new Metadata('Googlebot', 'Googlebot', '127.0.0.1');
 
-            $metadatas = array(
+            $metadatas = [
                 $googleBot,
-            );
+            ];
 
             $this->metadataCollection = $this->getMockBuilder(MetadataCollection::class)
                 ->getMock();
 
             $this->metadataCollection->expects($this->any())
                 ->method('getIterator')
-                ->will($this->returnCallback(function() use ($metadatas) {
-                    return new \ArrayIterator($metadatas);
-                }));
+                ->will(
+                    $this->returnCallback(
+                        function () use ($metadatas) {
+                            return new \ArrayIterator($metadatas);
+                        }
+                    )
+                );
 
             $this->metadataCollection->expects($this->any())
                 ->method('getMetadatas')

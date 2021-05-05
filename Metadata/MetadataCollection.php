@@ -11,15 +11,17 @@
 
 namespace Vipx\BotDetect\Metadata;
 
+use ArrayIterator;
 use Symfony\Component\Config\Resource\ResourceInterface;
+use Traversable;
 
 class MetadataCollection implements \IteratorAggregate
 {
 
-    private $resources = array();
-    private $metadatas = array();
+    private $resources = [];
+    private $metadatas = [];
 
-    public function addCollection(MetadataCollection $collection)
+    public function addCollection(MetadataCollection $collection): void
     {
         foreach ($collection->getMetadatas() as $metadata) {
             $this->addMetadata($metadata);
@@ -30,31 +32,28 @@ class MetadataCollection implements \IteratorAggregate
         }
     }
 
-    public function addMetadata(MetadataInterface $metadata)
+    public function addMetadata(MetadataInterface $metadata): void
     {
         $this->metadatas[$metadata->getName()] = $metadata;
     }
 
-    public function getMetadatas()
+    public function getMetadatas(): array
     {
         return $this->metadatas;
     }
 
-    public function addResource(ResourceInterface $resource)
+    public function addResource(ResourceInterface $resource): void
     {
         $this->resources[] = $resource;
     }
 
-    public function getResources()
+    public function getResources(): array
     {
         return $this->resources;
     }
 
-    /**
-     * @return \Traversable
-     */
-    public function getIterator()
+    public function getIterator(): Traversable
     {
-        return new \ArrayIterator($this->metadatas);
+        return new ArrayIterator($this->metadatas);
     }
 }

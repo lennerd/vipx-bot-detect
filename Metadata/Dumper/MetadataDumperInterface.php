@@ -19,6 +19,6 @@ interface MetadataDumperInterface
      *
      * @return string
      */
-    function dump();
+    public function dump(): string;
 
 }

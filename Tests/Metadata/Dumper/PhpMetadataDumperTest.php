@@ -45,9 +45,9 @@ class PhpMetadataDumperTest extends TestCase
             ->method('getAgentMatch')
             ->will($this->returnValue(MetadataInterface::AGENT_MATCH_REGEXP));
 
-        $this->metadatas = array(
+        $this->metadatas = [
             'TestBot' => $metadata,
-        );
+        ];
         $this->dumper = new PhpMetadataDumper($this->metadatas);
 
         $this->testTmpFilePath = sys_get_temp_dir().DIRECTORY_SEPARATOR.'project_vipx_bot_detect_metadata.php';
@@ -65,7 +65,7 @@ class PhpMetadataDumperTest extends TestCase
         $this->testTmpFilePath = null;
     }
 
-    public function testDump()
+    public function testDump(): void
     {
         file_put_contents($this->testTmpFilePath, $this->dumper->dump());
         $metadatas = require $this->testTmpFilePath;
