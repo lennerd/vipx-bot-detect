@@ -11,6 +11,7 @@
 
 namespace Vipx\BotDetect\Tests;
 
+use InvalidArgumentException;
 use PHPUnit\Framework\TestCase;
 use Vipx\BotDetect\BotDetector;
 use Symfony\Component\Config\Loader\LoaderInterface;
@@ -27,11 +28,9 @@ class BotDetectorTest extends TestCase
     private $loader;
     private $cacheFile;
 
-    /**
-     * @expectedException \InvalidArgumentException
-     */
     public function testInvalidOptions()
     {
+        $this->expectException(InvalidArgumentException::class);
         $detector = $this->createDetector();
 
         $detector->setOptions(array(

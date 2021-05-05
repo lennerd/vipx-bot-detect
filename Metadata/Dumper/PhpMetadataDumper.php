@@ -70,7 +70,7 @@ EOF;
             }
         }
 
-        return implode($dump, "\n");
+        return implode("\n", $dump);
     }
 
 }

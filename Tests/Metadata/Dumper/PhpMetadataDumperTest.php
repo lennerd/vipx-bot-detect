@@ -22,7 +22,7 @@ class PhpMetadataDumperTest extends TestCase
     private $dumper;
     private $testTmpFilePath;
 
-    protected function setUp()
+    protected function setUp(): void
     {
         parent::setUp();
 
@@ -54,7 +54,7 @@ class PhpMetadataDumperTest extends TestCase
         @unlink($this->testTmpFilePath);
     }
 
-    protected function tearDown()
+    protected function tearDown(): void
     {
         parent::tearDown();
 
