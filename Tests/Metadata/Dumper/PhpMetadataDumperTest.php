@@ -29,21 +29,21 @@ class PhpMetadataDumperTest extends TestCase
         $metadata = $this->getMockBuilder(MetadataInterface::class)
             ->getMock();
 
-        $metadata->expects($this->any())
+        $metadata
             ->method('getAgent')
-            ->will($this->returnValue('TestBot'));
+            ->willReturn('TestBot');
 
-        $metadata->expects($this->any())
+        $metadata
             ->method('getIp')
-            ->will($this->returnValue(null));
+            ->willReturn(null);
 
-        $metadata->expects($this->any())
+        $metadata
             ->method('getType')
-            ->will($this->returnValue(MetadataInterface::TYPE_BOT));
+            ->willReturn(MetadataInterface::TYPE_BOT);
 
-        $metadata->expects($this->any())
+        $metadata
             ->method('getAgentMatch')
-            ->will($this->returnValue(MetadataInterface::AGENT_MATCH_REGEXP));
+            ->willReturn(MetadataInterface::AGENT_MATCH_REGEXP);
 
         $this->metadatas = [
             'TestBot' => $metadata,
@@ -70,8 +70,8 @@ class PhpMetadataDumperTest extends TestCase
         file_put_contents($this->testTmpFilePath, $this->dumper->dump());
         $metadatas = require $this->testTmpFilePath;
 
-        $this->assertArrayHasKey('TestBot', $metadatas);
-        $this->assertEquals($metadatas['TestBot'], $this->metadatas['TestBot']);
+        self::assertArrayHasKey('TestBot', $metadatas);
+        self::assertEquals($metadatas['TestBot'], $this->metadatas['TestBot']);
     }
 
 }
