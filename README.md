@@ -2,8 +2,8 @@
 
 This library helps you detecting bots like Google, Yahoo or Bing.
 
-[![Build Status](https://travis-ci.org/lennerd/vipx-bot-detect.svg?branch=master)](https://travis-ci.org/lennerd/vipx-bot-detect)
-[![Coverage Status](https://img.shields.io/coveralls/lennerd/vipx-bot-detect.svg)](https://coveralls.io/r/lennerd/vipx-bot-detect?branch=master)
+[![Tests](https://github.com/lennerd/vipx-bot-detect/actions/workflows/tests.yml/badge.svg)](https://github.com/lennerd/vipx-bot-detect/actions/workflows/tests.yml)
+[![Coverage Status](https://coveralls.io/repos/github/lennerd/vipx-bot-detect/badge.svg)](https://coveralls.io/github/lennerd/vipx-bot-detect)
 
 ## Installation using [composer](https://getcomposer.org/)
 
