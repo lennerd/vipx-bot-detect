@@ -1,0 +1,54 @@
+name: Tests
+
+on:
+  push:
+  pull_request:
+
+jobs:
+  integration:
+    name: Integration
+    runs-on: ubuntu-latest
+
+    strategy:
+      matrix:
+        php: ['5.6', '7.0', '7.1']
+        symfony: [2.7.*, 2.8.*, 3.2.*, 3.4.*]
+
+        include:
+          - php: '7.1'
+            symfony: 4.0.*
+
+    steps:
+      - uses: actions/checkout@v2
+
+      - name: Setup PHP
+        uses: shivammathur/setup-php@v2
+        with:
+          php-version: ${{ matrix.php }}
+
+      - name: Determine composer cache directory
+        id: composer-cache
+        run: echo "::set-output name=directory::$(composer config cache-dir)"
+
+      - name: Cache composer dependencies
+        uses: actions/cache@v1
+        with:
+          path: ${{ steps.composer-cache.outputs.directory }}
+          key: ${{ matrix.php }}-composer-${{ hashFiles('**/composer.lock') }}
+          restore-keys: ${{ matrix.php }}-composer-
+
+      - name: Install symfony version
+        run: composer require --dev --no-update symfony/symfony=${{ matrix.symfony }}
+
+      - name: Install dependencies
+        run: composer update --prefer-dist --prefer-stable
+
+      - name: Run tests
+        run: |
+          mkdir -p build/logs
+          ./vendor/bin/phpunit --coverage-clover build/logs/clover.xml
+
+      - name: Post coverage
+        uses: coverallsapp/github-action@master
+        with:
+          github-token: ${{ secrets.GITHUB_TOKEN }}
