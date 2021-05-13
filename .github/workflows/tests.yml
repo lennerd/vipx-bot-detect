@@ -48,7 +48,10 @@ jobs:
           mkdir -p build/logs
           ./vendor/bin/phpunit --coverage-clover build/logs/clover.xml
 
-      - name: Post coverage
-        uses: coverallsapp/github-action@master
-        with:
-          github-token: ${{ secrets.GITHUB_TOKEN }}
+      - name: Install Coveralls
+        run: |
+          wget https://github.com/php-coveralls/php-coveralls/releases/download/v2.4.3/php-coveralls.phar
+          chmod +x php-coveralls.phar
+
+      - name: Post coverage to Coveralls
+        run: php coveralls.phar -v
