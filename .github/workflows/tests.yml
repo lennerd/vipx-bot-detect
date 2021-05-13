@@ -48,10 +48,9 @@ jobs:
           mkdir -p build/logs
           ./vendor/bin/phpunit --coverage-clover build/logs/clover.xml
 
-      - name: Install Coveralls
+      - name: Upload coverage results to Coveralls
+        env:
+          COVERALLS_REPO_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         run: |
-          wget https://github.com/php-coveralls/php-coveralls/releases/download/v2.4.3/php-coveralls.phar
-          chmod +x php-coveralls.phar
-
-      - name: Post coverage to Coveralls
-        run: php coveralls.phar -v
+          composer global require php-coveralls/php-coveralls
+          php-coveralls --coverage_clover=build/logs/clover.xml -v
