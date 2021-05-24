@@ -11,13 +11,16 @@
 
 namespace Vipx\BotDetect\Metadata\Dumper;
 
+use Vipx\BotDetect\Metadata\Metadata;
+use Vipx\BotDetect\Metadata\MetadataInterface;
+
 abstract class MetadataDumper implements MetadataDumperInterface
 {
 
-    private $metadatas = array();
+    private $metadatas;
 
     /**
-     * @param \Vipx\BotDetect\Metadata\MetadataInterface[] $metadatas
+     * @param MetadataInterface[] $metadatas
      */
     public function __construct(array $metadatas)
     {
@@ -27,9 +30,9 @@ abstract class MetadataDumper implements MetadataDumperInterface
     /**
      * Returns all bot metadatas
      *
-     * @return \Vipx\BotDetect\Metadata\Metadata[]
+     * @return Metadata[]
      */
-    public function getMetadatas()
+    public function getMetadatas(): array
     {
         return $this->metadatas;
     }

@@ -11,6 +11,8 @@
 
 namespace Vipx\BotDetect\Metadata\Loader;
 
+use Symfony\Component\Config\Exception\FileLoaderImportCircularReferenceException;
+use Symfony\Component\Config\Exception\LoaderLoadException;
 use Symfony\Component\Config\Loader\FileLoader;
 use Symfony\Component\Yaml\Yaml;
 use Symfony\Component\Config\Resource\FileResource;
@@ -25,14 +27,14 @@ class YamlFileLoader extends FileLoader
      * @param null|string $type
      * @return MetadataCollection
      */
-    public function load($file, $type = null)
+    public function load($file, ?string $type = null): MetadataCollection
     {
         $file = $this->locator->locate($file, __DIR__.'/../../Resources/metadata');
         $collection = new MetadataCollection();
 
         $collection->addResource(new FileResource($file));
 
-        $content = Yaml::parse( file_get_contents($file) );
+        $content = Yaml::parse(file_get_contents($file));
 
         $this->parseImports($collection, $content, $file);
         $this->parseBots($collection, $content);
@@ -45,7 +47,7 @@ class YamlFileLoader extends FileLoader
      * @param null|string $type
      * @return bool
      */
-    public function supports($resource, $type = null)
+    public function supports($resource, ?string $type = null): bool
     {
         return is_string($resource) && 'yml' === pathinfo($resource, PATHINFO_EXTENSION);
     }
@@ -56,11 +58,10 @@ class YamlFileLoader extends FileLoader
      * @param MetadataCollection $collection
      * @param array $content
      * @param string $file
-     * @throws \Exception
-     * @throws \Symfony\Component\Config\Exception\FileLoaderImportCircularReferenceException
-     * @throws \Symfony\Component\Config\Exception\FileLoaderLoadException
+     * @throws FileLoaderImportCircularReferenceException
+     * @throws LoaderLoadException
      */
-    private function parseImports(MetadataCollection $collection, $content, $file)
+    private function parseImports(MetadataCollection $collection, array $content, string $file): void
     {
         if (!isset($content['imports'])) {
             return;
@@ -68,7 +69,14 @@ class YamlFileLoader extends FileLoader
 
         foreach ($content['imports'] as $import) {
             $this->setCurrentDir(dirname($file));
-            $collection->addCollection($this->import($import['resource'], null, isset($import['ignore_errors']) ? (Boolean) $import['ignore_errors'] : false, $file));
+            $collection->addCollection(
+                $this->import(
+                    $import['resource'],
+                    null,
+                    isset($import['ignore_errors']) && $import['ignore_errors'],
+                    $file
+                )
+            );
         }
     }
 
@@ -77,17 +85,17 @@ class YamlFileLoader extends FileLoader
      *
      * @param MetadataCollection $collection
      * @param $content
-     * @return array
+     * @return void
      */
-    private function parseBots(MetadataCollection $collection, $content)
+    private function parseBots(MetadataCollection $collection, $content): void
     {
         if (!isset($content['bots'])) {
             return;
         }
 
         foreach ($content['bots'] as $name => $bot) {
-            $ip = isset($bot['ip']) ? $bot['ip'] : null;
-            $metadata = new Metadata($name, $bot['agent'], $ip);
+            $ip = $bot['ip'] ?? [];
+            $metadata = new Metadata($name, $bot['agent'], (array) $ip);
 
             if (isset($bot['type'])) {
                 $metadata->setType($bot['type']);

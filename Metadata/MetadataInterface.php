@@ -14,65 +14,65 @@ namespace Vipx\BotDetect\Metadata;
 interface MetadataInterface
 {
 
-    const AGENT_MATCH_EXACT = 'exact';
-    const AGENT_MATCH_REGEXP = 'regexp';
+    public const AGENT_MATCH_EXACT = 'exact';
+    public const AGENT_MATCH_REGEXP = 'regexp';
 
-    const TYPE_BOT = 'bot';
-    const TYPE_CRAWLER = 'crawler';
-    const TYPE_SPIDER = 'spider';
-    const TYPE_SPAMBOT = 'spambot';
-    const TYPE_RSS = 'rss';
-    const TYPE_VALIDATOR = 'validator';
+    public const TYPE_BOT = 'bot';
+    public const TYPE_CRAWLER = 'crawler';
+    public const TYPE_SPIDER = 'spider';
+    public const TYPE_SPAMBOT = 'spambot';
+    public const TYPE_RSS = 'rss';
+    public const TYPE_VALIDATOR = 'validator';
 
     /**
      * Returns the name of the bot
      *
      * @return string
      */
-    function getName();
+    public function getName(): string;
 
     /**
      * Returns true if the given agent and ip matches the agent and ip of the bot
      *
      * @param string $agent
-     * @param string $ip
+     * @param string|null $ip
      * @return bool
      */
-    function match($agent, $ip);
+    public function match(string $agent, ?string $ip): bool;
 
     /**
      * Returns the agent of the bot
      *
      * @return string
      */
-    function getAgent();
+    public function getAgent(): string;
 
     /**
      * Returns the type of the agent check
      *
      * @return string
      */
-    function getAgentMatch();
+    public function getAgentMatch(): string;
 
     /**
-     * Returns the ip of the bot
+     * Returns the ips of the bot (if any)
      *
-     * @return null|string
+     * @return array
      */
-    function getIp();
+    public function getIps(): array;
 
     /**
      * Returns the type of the bot
      *
      * @return string
      */
-    function getType();
+    public function getType(): string;
 
     /**
      * Returns the meta information's of the bot
      *
      * @return array
      */
-    function getMeta();
+    public function getMeta(): array;
 
 }
