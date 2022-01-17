@@ -11,8 +11,13 @@
 
 namespace Vipx\BotDetect;
 
+use InvalidArgumentException;
 use Symfony\Component\Config\Loader\LoaderInterface;
 use Symfony\Component\Config\ConfigCache;
+use Vipx\BotDetect\Metadata\Dumper\MetadataDumper;
+use Vipx\BotDetect\Metadata\Dumper\PhpMetadataDumper;
+use Vipx\BotDetect\Metadata\Metadata;
+use Vipx\BotDetect\Metadata\MetadataCollection;
 
 class BotDetector implements BotDetectorInterface
 {
@@ -23,11 +28,11 @@ class BotDetector implements BotDetectorInterface
     private $options;
 
     /**
-     * @param \Symfony\Component\Config\Loader\LoaderInterface $loader
+     * @param LoaderInterface $loader
      * @param $resource
      * @param array $options
      */
-    public function __construct(LoaderInterface $loader, $resource, array $options = array())
+    public function __construct(LoaderInterface $loader, $resource, array $options = [])
     {
         $this->loader = $loader;
         $this->resource = $resource;
@@ -37,19 +42,19 @@ class BotDetector implements BotDetectorInterface
 
     /**
      * @param array $options
-     * @throws \InvalidArgumentException
+     * @throws InvalidArgumentException
      */
-    public function setOptions(array $options)
+    public function setOptions(array $options): void
     {
-        $this->options = array(
-            'cache_dir'             => null,
-            'debug'                 => false,
-            'metadata_cache_file'   => 'project_vipx_bot_detect_metadata.php',
-            'metadata_dumper_class' => 'Vipx\\BotDetect\\Metadata\\Dumper\\PhpMetadataDumper',
-        );
+        $this->options = [
+            'cache_dir' => null,
+            'debug' => false,
+            'metadata_cache_file' => 'project_vipx_bot_detect_metadata.php',
+            'metadata_dumper_class' => PhpMetadataDumper::class,
+        ];
 
         // check option names and live merge, if errors are encountered Exception will be thrown
-        $invalid = array();
+        $invalid = [];
         foreach ($options as $key => $value) {
             if (array_key_exists($key, $this->options)) {
                 $this->options[$key] = $value;
@@ -59,7 +64,9 @@ class BotDetector implements BotDetectorInterface
         }
 
         if ($invalid) {
-            throw new \InvalidArgumentException(sprintf('The BotDetector does not support the following options: "%s".', implode('\', \'', $invalid)));
+            throw new InvalidArgumentException(
+                sprintf('The BotDetector does not support the following options: "%s".', implode('\', \'', $invalid))
+            );
         }
     }
 
@@ -68,15 +75,15 @@ class BotDetector implements BotDetectorInterface
      *
      * @return array
      */
-    public function getOptions()
+    public function getOptions(): array
     {
         return $this->options;
     }
 
     /**
-     * @return \Vipx\BotDetect\Metadata\Metadata[]
+     * @return Metadata[]
      */
-    public function getMetadatas()
+    public function getMetadatas(): array
     {
         if (null !== $this->metadatas) {
             return $this->metadatas;
@@ -88,18 +95,21 @@ class BotDetector implements BotDetectorInterface
             return $this->metadatas = $metadataCollection->getMetadatas();
         }
 
-        $cache = new ConfigCache($this->options['cache_dir'] . '/' . $this->options['metadata_cache_file'], $this->options['debug']);
+        $cache = new ConfigCache(
+            $this->options['cache_dir'].'/'.$this->options['metadata_cache_file'],
+            $this->options['debug']
+        );
 
         if ($cache->isFresh()) {
             return $this->metadatas = require $cache->getPath();
         }
 
-        /** @var $metadataCollection \Vipx\BotDetect\Metadata\MetadataCollection */
+        /** @var $metadataCollection MetadataCollection */
         $metadataCollection = $this->loader->load($this->resource);
         $dumperClass = $this->options['metadata_dumper_class'];
         $metadatas = $metadataCollection->getMetadatas();
 
-        /** @var $dumper \Vipx\BotDetect\Metadata\Dumper\MetadataDumper */
+        /** @var $dumper MetadataDumper */
         $dumper = new $dumperClass($metadatas);
 
         $cache->write($dumper->dump(), $metadataCollection->getResources());
@@ -110,7 +120,7 @@ class BotDetector implements BotDetectorInterface
     /**
      * {@inheritdoc}
      */
-    public function detect($agent, $ip)
+    public function detect(string $agent, string $ip): ?Metadata
     {
         $agent = trim($agent);
         foreach ($this->getMetadatas() as $metadata) {

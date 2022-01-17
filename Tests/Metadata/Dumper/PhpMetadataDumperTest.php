@@ -22,39 +22,39 @@ class PhpMetadataDumperTest extends TestCase
     private $dumper;
     private $testTmpFilePath;
 
-    protected function setUp()
+    protected function setUp(): void
     {
         parent::setUp();
 
         $metadata = $this->getMockBuilder(MetadataInterface::class)
             ->getMock();
 
-        $metadata->expects($this->any())
+        $metadata
             ->method('getAgent')
-            ->will($this->returnValue('TestBot'));
+            ->willReturn('TestBot');
 
-        $metadata->expects($this->any())
+        $metadata
             ->method('getIp')
-            ->will($this->returnValue(null));
+            ->willReturn(null);
 
-        $metadata->expects($this->any())
+        $metadata
             ->method('getType')
-            ->will($this->returnValue(MetadataInterface::TYPE_BOT));
+            ->willReturn(MetadataInterface::TYPE_BOT);
 
-        $metadata->expects($this->any())
+        $metadata
             ->method('getAgentMatch')
-            ->will($this->returnValue(MetadataInterface::AGENT_MATCH_REGEXP));
+            ->willReturn(MetadataInterface::AGENT_MATCH_REGEXP);
 
-        $this->metadatas = array(
+        $this->metadatas = [
             'TestBot' => $metadata,
-        );
+        ];
         $this->dumper = new PhpMetadataDumper($this->metadatas);
 
         $this->testTmpFilePath = sys_get_temp_dir().DIRECTORY_SEPARATOR.'project_vipx_bot_detect_metadata.php';
         @unlink($this->testTmpFilePath);
     }
 
-    protected function tearDown()
+    protected function tearDown(): void
     {
         parent::tearDown();
 
@@ -65,13 +65,13 @@ class PhpMetadataDumperTest extends TestCase
         $this->testTmpFilePath = null;
     }
 
-    public function testDump()
+    public function testDump(): void
     {
         file_put_contents($this->testTmpFilePath, $this->dumper->dump());
         $metadatas = require $this->testTmpFilePath;
 
-        $this->assertArrayHasKey('TestBot', $metadatas);
-        $this->assertEquals($metadatas['TestBot'], $this->metadatas['TestBot']);
+        self::assertArrayHasKey('TestBot', $metadatas);
+        self::assertEquals($metadatas['TestBot'], $this->metadatas['TestBot']);
     }
 
 }

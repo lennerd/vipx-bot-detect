@@ -14,55 +14,56 @@ namespace Vipx\BotDetect\Tests\Loader;
 use PHPUnit\Framework\TestCase;
 use Vipx\BotDetect\Metadata\Loader\YamlFileLoader;
 use Symfony\Component\Config\FileLocator;
+use Vipx\BotDetect\Metadata\Metadata;
 use Vipx\BotDetect\Metadata\MetadataInterface;
 
 class YamlFileLoaderTest extends TestCase
 {
 
-    public function testSupport()
+    public function testSupport(): void
     {
         $locator = new FileLocator();
         $loader = new YamlFileLoader($locator);
 
-        $this->assertTrue($loader->supports('test.yml'));
-        $this->assertFalse($loader->supports('test.xml'));
+        self::assertTrue($loader->supports('test.yml'));
+        self::assertFalse($loader->supports('test.xml'));
     }
 
-    public function testEasyLoaderPath()
+    public function testEasyLoaderPath(): void
     {
         $locator = new FileLocator();
         $loader = new YamlFileLoader($locator);
 
-        $metadatasAbsolute  = $loader->load(__DIR__ . '/../../../Resources/metadata/extended.yml')->getMetadatas();
+        $metadatasAbsolute = $loader->load(__DIR__.'/../../../Resources/metadata/extended.yml')->getMetadatas();
         $metadatasEasy = $loader->load('extended.yml')->getMetadatas();
 
-        $this->assertEquals($metadatasAbsolute, $metadatasEasy);
+        self::assertEquals($metadatasAbsolute, $metadatasEasy);
     }
 
-    public function testParsing()
+    public function testParsing(): void
     {
         $locator = new FileLocator();
         $loader = new YamlFileLoader($locator);
-        $metadataFile = __DIR__ . '/../../../Resources/metadata/extended.yml';
+        $metadataFile = __DIR__.'/../../../Resources/metadata/extended.yml';
 
         $metadatas = $loader->load($metadataFile)->getMetadatas();
 
-        $this->assertArrayHasKey('Googlebot', $metadatas);
-        $this->assertArrayHasKey('vectra-mods', $metadatas);
+        self::assertArrayHasKey('Googlebot', $metadatas);
+        self::assertArrayHasKey('vectra-mods', $metadatas);
 
-        /** @var $metadata \Vipx\BotDetect\Metadata\Metadata */
+        /** @var $metadata Metadata */
         $metadata = $metadatas['Googlebot'];
 
-        $this->assertEquals('Googlebot', $metadata->getAgent());
-        $this->assertEquals(null, $metadata->getIp());
-        $this->assertEquals(MetadataInterface::TYPE_BOT, $metadata->getType());
+        self::assertEquals('Googlebot', $metadata->getAgent());
+        self::assertEquals(null, $metadata->getIp());
+        self::assertEquals(MetadataInterface::TYPE_BOT, $metadata->getType());
 
-        /** @var $metadata \Vipx\BotDetect\Metadata\Metadata */
+        /** @var $metadata Metadata */
         $metadata = $metadatas['vectra-mods'];
 
-        $this->assertEquals('', $metadata->getAgent());
-        $this->assertEquals('212.227.101.211', $metadata->getIp());
-        $this->assertEquals(MetadataInterface::TYPE_SPAMBOT, $metadata->getType());
+        self::assertEquals('', $metadata->getAgent());
+        self::assertEquals('212.227.101.211', $metadata->getIp());
+        self::assertEquals(MetadataInterface::TYPE_SPAMBOT, $metadata->getType());
     }
 
 }

@@ -11,6 +11,8 @@
 
 namespace Vipx\BotDetect;
 
+use Vipx\BotDetect\Metadata\Metadata;
+
 interface BotDetectorInterface
 {
 
@@ -19,8 +21,8 @@ interface BotDetectorInterface
      *
      * @param string $agent
      * @param string $ip
-     * @return null|\Vipx\BotDetect\Metadata\Metadata
+     * @return null|Metadata
      */
-    function detect($agent, $ip);
+    public function detect(string $agent, string $ip): ?Metadata;
 
 }
