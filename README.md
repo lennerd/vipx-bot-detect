@@ -28,7 +28,7 @@ $metadataFile = './Resources/metadata/extended.yml';
 $detector = new BotDetector($loader, $metadataFile);
 
 # Call detect() on BotDetector, passing in a user agent string and IP address,
-# most commonly found in $_SERVER['HTTP_USER_AGENT'] and $_SERVER['REQUEST_ADDR']
+# most commonly found in $_SERVER['HTTP_USER_AGENT'] and $_SERVER['REMOTE_ADDR']
 # respectively.
 # detect() will return a Vipx\BotDetect\Metadata\Metadata object containing the
 # details of a matched bot and null on no match.
